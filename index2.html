@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SDLC</title>
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootsrap-icon-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- bootstrap-css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/style2.css" />
+  </head>
+  <body>
+    <!-- nav-sec -->
+    <header class="header-sec" class="luxy-el" data-speed="0.08">
+      <div class="container">
+        <nav class="nav-top">
+          <ul class="nav-top-list">
+            <li>
+              <a href="" class="nav-top-link">
+                <i class="bi bi-geo-alt"></i>
+                <span>657 twin lakes Drive, Reno,NV 89523</span>
+              </a>
+            </li>
+            <li>
+              <a href="" class="nav-top-link">
+                <i class="fa-regular fa-envelope"></i>
+                <span>support@localpro.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="" class="nav-top-link">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Daily 09am - 10pm</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="social-list">
+             <li>
+              <a href="" class="follow-link"
+                >Follow Us:</a>
+            </li>
+            <li>
+              <a href="" class="social-link"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" class="social-link"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" class="social-link"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" class="social-link"
+                ><i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div class="nav-logo">
+            <a class="navbar-brand" href="#">
+              <img src="./images/Group 1000004669.png" alt="" />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" id="navbarSupportedContent">
+            <div
+              class="offcanvas-header"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-x"></i>
+            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="index2.html">About Us</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="drop-link dropdown-toggle"
+                  href="index3.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index3.html">services</a></li>
+                  <li><a class="dropdown-item" href="#">Plumber</a></li>
+                  <li><a class="dropdown-item" href="#">Electrician</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cleaner</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index5.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-btn">
+              <!-- <a href="" class="primary-btn">Sing In</a> -->
+              <!-- Button trigger modal -->
+              <a
+                data-bs-toggle="modal"
+                class="primary-btn"
+                data-bs-target="#staticBackdrop"
+              >
+                Sing In
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Create an account
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" class="modal-form" id="modalform">
+              <div class="row modal-row align-items-center">
+                <div class="col-12">
+                <div class="input-cont">
+                   <p id="emailError" class="error"></p>
+                    <label class="modal-lable" for="modal-email">Email</label> <br />
+                  <input
+                    type="email"
+                    placeholder="Enter Your Email"
+                    name=""
+                    id="modal-email"
+                  />
+                </div>
+                </div>
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="passwordError" class="error"></p>
+                    <label class="modal-lable" for="modal-password">password</label> <br />
+                  <input
+                    type="password"
+                    placeholder="Enter Your Password"
+                    name=""
+                    id="modal-password"
+                  />
+                  </div>
+                </div>
+                <div class="col-12 modal-col">
+                 <div class="input-cont btn-cont">
+                  <button type="submit" class="modal-btn">Create account</button>
+                 </div>
+                </div>
+                <div class="col-6">
+                  <a href="" class="apple-btn">
+                    <figure class="apple-img">
+                      <img src="./imges2/Vector (3).png" alt="" />
+                    </figure>
+                    Apple
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="" class="google-btn">
+                    <figure class="apple-img">
+                      <img src="./imges2/Google - Original.png" alt="" />
+                    </figure>
+                    Google
+                  </a>
+                </div>
+                <div class="col-12">
+                  <div class="input-cont-para">
+                    <p>Already have an account ?</p>
+                    <a href="" class="log-btn">Log In</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- banner-sec -->
+      <section class="banner-sec">
+        <div class="container banner-container">
+          <div class="banner-cont" data-aos="fade-up">
+            <div class="title3">About Us</div>
+            <div class="title1">
+              Easy way to find a perfect Service with Finder
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- approach-sec -->
+      <section class="approach-sec">
+        <div class="container">
+          <!-- <div class="approach-cont">
+                <h4 class="title4">our approach</h4>
+                <h2 class="title2">
+                  Complete electrical services <span> for everyday</span>
+                </h2>
+                <p>
+                  From small repairs to large-scale installations our
+                  experienced electricians provide tailored solutions to power
+                  your home.
+                </p>
+              </div> -->
+          <div class="row approach-row align-items-center">
+            <div class="col-xxl-7 col-xl-7 col-lg-7 col-12">
+              <div class="row">
+                <div
+                  class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                >
+                  <div
+                    class="card approach-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <div class="card-img">
+                      <img src="./imges2/image 73.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <div class="card-title">25+ Years Of Experience</div>
+                      <p class="card-text">
+                        Trusted electrical experts with 25+ years of experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                >
+                  <div class="approach-sub-img" data-aos="fade-left">
+                    <img src="./imges2/Rectangle 9.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="approach-img">
+                <img src="./imges2/Rectangle 10.png" alt="" />
+              </div> -->
+            </div>
+            <div class="col-xxl-5 col-xl-5 col-lg-5 col-12">
+              <div class="approach-cont" data-aos="fade-right">
+                <h4 class="title4">our approach</h4>
+                <h2 class="title2">
+                  Complete electrical services <span> for everyday</span>
+                </h2>
+                <p>
+                  From small repairs to large-scale installations our
+                  experienced electricians provide tailored solutions to power
+                  your home.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-xxl-7 col-xl-7 col-lg-7 col-12">
+              <div class="approach-img">
+                <img src="./imges2/Rectangle 10.png" alt="" />
+              </div>
+            </div>
+            <div class="col-xxl-5 col-xl-5 col-lg-5 col-12">
+              <div class="row">
+                <div
+                  class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 approach-col"
+                >
+                  <div class="card approach-sub-card">
+                    <div class="card-sub-body">
+                      <div class="card-cont-img">
+                        <img src="./imges2/image 74.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-title">Providing Awesome Service</div>
+                      <p class="card-text">
+                        Skilled professionals dedicated to delivering quality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 approach-col"
+                >
+                  <div class="card approach-sub-card">
+                    <div class="card-sub-body">
+                      <div class="card-cont-img">
+                        <img src="./imges2/image 75.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-title">24/7 Our Support</div>
+                      <p class="card-text">
+                        Skilled professionals dedicated to delivering quality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- electric-sec -->
+      <section class="electric-sec">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
+              <div class="electric-header" data-aos="fade-up">
+                <h4 class="title4">our approach</h4>
+                <h2 class="title2">
+                  Complete electrical services <span>for everyday</span>
+                </h2>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-12">
+                  <div class="card electric-card" data-aos="zoom-in">
+                    <div class="card-box">
+                      <div class="electric-card-img">
+                        <img
+                          src="./imges2/Frame 93.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="electric-card-title">Our Mission</div>
+                      <p class="card-para">
+                        Our mission is to deliver, reliable and high-quality
+                        ensuring efficiency and excellence in every project we
+                        undertake.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card electric-card" data-aos="zoom-in">
+                    <div class="card-box">
+                      <div class="electric-card-img">
+                        <img
+                          src="./imges2/image 77.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="electric-card-title">Our Vission</div>
+                      <p class="card-para">
+                        Our vision is to deliver, reliable and high-quality
+                        ensuring efficiency and excellence in every project we
+                        undertake.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12 electric-col">
+             <div class="electic-img-wraper">
+               <div class="electric-img" data-aos="zoom-in">
+                <img src="./imges2/Subtract.png" alt="" />
+                <!-- <div class="top-corner"></div>
+                <div class="bottom-corner"></div> -->
+                <figure class="electric-sub-img">
+                  <img src="./imges2/Rectangle 13.png" alt="" />
+                </figure>
+              </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- estimate-sec -->
+      <section class="estimate-sec">
+        <div class="container estimate-conatiner">
+          <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
+              <div class="estimate-cont" data-aos="fade-right">
+                <h4 class="title4">get a estimate</h4>
+                <h2 class="title2">
+                  Hassle free estimate just a <span>click away</span>.
+                </h2>
+                <p>
+                  Our goal is to be a leader in providing environmentally
+                  conscious electrical services. We focus on energy-efficient
+                  solutions.
+                </p>
+                <ul>
+                  <li>Seasonal & Locally Sourced Ingredients</li>
+                  <li>Vegetarian & Dietary-Friendly Options</li>
+                  <li>Exquisite Pairings & Unique Flavors</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
+              <div class="estimate-img" data-aos="fade-left">
+                <img
+                  src="./imges2/isolated-studio-shot-cheerful-emotional-young-repairman-wearing-protective-goggles 1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-12">
+              <div
+                class="estimate-sub-cont"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="estimate-sub-img">
+                  <img src="./imges2/image 78.png" alt="" />
+                </div>
+                <div class="counter title2" data-target="400">0</div>
+                <p>Projects Completed</p>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-12">
+              <div
+                class="estimate-sub-cont"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="estimate-sub-img">
+                  <img src="./imges2/image 79.png" alt="" />
+                </div>
+                <div class="counter title2" data-target="700">0</div>
+                <p>Emergency Repairs</p>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-12">
+              <div
+                class="estimate-sub-cont"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="estimate-sub-img">
+                  <img src="./imges2/image 80.png" alt="" />
+                </div>
+                <div class="counter title2" data-target="4500">0</div>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-12">
+              <div
+                class="estimate-sub-cont"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="estimate-sub-img">
+                  <img src="./imges2/image 81.png" alt="" />
+                </div>
+                <div class="counter title2" data-target="150">0</div>
+                <p>Skilled Professionals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- choose-sec -->
+      <section class="choose-sec">
+        <div class="container">
+          <div class="row choose-row align-items-center">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
+              <div class="choose-img" data-aos="fade-right">
+                <img src="./imges2/Rectangle 15.png" alt="" />
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
+              <div class="choose-cont" data-aos="fade-left">
+                <h4 class="title4">why choose us</h4>
+                <h2 class="title2">
+                  powering progress through <span>excellence</span>
+                </h2>
+                <h4 class="title4">
+                  Over the years, we've accomplished remarkable milestones in
+                  the electrical services industry. From completing complex
+                  projects to earning
+                </h4>
+                <ul>
+                  <li>
+                    Committed to delivering safe and efficient electrical
+                    solutions.
+                  </li>
+                  <li>
+                    Backed by years of expertise and professional excellence.
+                  </li>
+                </ul>
+                <div class="choose-btn">
+                  <a class="view-btn">
+                    View Our Milestones <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer-sec -->
+    <footer
+      class="luxy-el footer-sec"
+      data-speed="0.06"
+      data-speed="0.06"
+      data-aos="fade-up"
+    >
+      <div class="container">
+        <div class="luxy-el footer-header" data-speed="-0.1">
+          Subscribe Our Newsletter
+        </div>
+        <form action="" class="footer-form">
+          <div class="footer-form-cont">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Your Email"
+              name=""
+              id=""
+            />
+            <button type="submit" id="submit">
+              Subscribe <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+        <div class="row align-items-center">
+          <div class="col-20">
+            <div class="footer-main-cont">
+              <div class="footer-logo">
+                <a href=""
+                  ><img src="./images/Group 1000004670.png" alt=""
+                /></a>
+              </div>
+              <p>
+                LocalPro is your trusted platform for booking reliable home
+                services—anytime, anywhere. Whether you need a plumber,
+                electrician, technician,
+              </p>
+              <div class="footer-social">
+                <ul>
+                  <li>
+                    <a href="" class="footer-social-link">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="footer-social-link">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="footer-social-link">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="footer-social-link">
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-20">
+            <div class="footer-cont">
+              <div class="footer-cont-header">Site Links</div>
+              <ul>
+                <li><a href="" class="footer-link">Blog</a></li>
+                <li><a href="" class="footer-link">Contct Us</a></li>
+                <li><a href="" class="footer-link">Jobs</a></li>
+                <li><a href="" class="footer-link">Categories</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-20">
+            <div class="footer-cont">
+              <div class="footer-cont-header">Popular Cities</div>
+              <ul>
+                <li><a href="" class="footer-link">Ballston</a></li>
+                <li><a href="" class="footer-link">Lake</a></li>
+                <li><a href="" class="footer-link">Brooklyn</a></li>
+                <li><a href="" class="footer-link">Cambridge</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-20">
+            <div class="footer-cont">
+              <div class="footer-cont-header">Categories</div>
+              <ul>
+                <li><a href="" class="footer-link">Plumber</a></li>
+                <li><a href="" class="footer-link">House Cleaning</a></li>
+                <li><a href="" class="footer-link">Electrician</a></li>
+                <li><a href="" class="footer-link">AC technician</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-20">
+            <div class="footer-cont">
+              <div class="footer-cont-header">Contact Info</div>
+              <ul>
+                <li><a href="" class="footer-link"> India</a></li>
+                <li>
+                  <a href="" class="footer-link">
+                    <span> <i class="fa-solid fa-phone"></i></span>
+                    +912345678780</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="footer-link">
+                    <span> <i class="fa-solid fa-phone"></i></span>
+                    +913556484550</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="footer-link">
+                    <span><i class="fa-regular fa-envelope"></i></span>
+                    hellofixcart@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-lower-cont">
+            <div class="row footer-row align-items-center">
+              <div
+                class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12"
+              >
+                <div class="side-box">
+                  <div class="left-side">Copyright 2025</div>
+                  <div class="right-side">Aone Theme. All Right Reserved</div>
+                </div>
+              </div>
+              <div
+                class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12"
+              >
+                <div class="footer-low-img-cont">
+                  <div class="footer-lower-img">
+                    <img src="./images/image 72.png" alt="" />
+                  </div>
+                  <div class="footer-lower-img">
+                    <img src="./images/image 70.png" alt="" />
+                  </div>
+                  <div class="footer-lower-img">
+                    <img src="./images/736785 2.png" alt="" />
+                  </div>
+                  <div class="footer-lower-img">
+                    <img src="./images/image 71.png " alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- bootstrap-js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom-js -->
+    <script src="./js/script2.js"></script>
+  </body>
+</html>
