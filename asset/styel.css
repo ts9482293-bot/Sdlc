@@ -1808,7 +1808,7 @@ nav,
   border-right: 1px solid var(--social-color);
   padding-right: 5px;
   font-size: 14px;
-  color: var(--slider-color);
+  color: var(--social-color);
 }
 .right-side>a {
   margin-left: 5px;
