@@ -1808,10 +1808,12 @@ nav,
   border-right: 1px solid var(--social-color);
   padding-right: 5px;
   font-size: 14px;
+  color: var(--slider-color);
 }
 .right-side>a {
   margin-left: 5px;
   font-size: 14px;
+  color: var(--social-color);
 }
 .footer-low-img-cont {
   display: flex;
