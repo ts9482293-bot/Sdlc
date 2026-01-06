@@ -1250,6 +1250,9 @@ nav,
     padding: 0;
     border: 0;
   }
+  .primary-btn{
+    margin-top: 10px;
+  }
   /* ---------- END HEADER SECTION ----------- */
   /* ------------ START BANNER SECTION---- */
     .hero {
@@ -1527,7 +1530,7 @@ nav,
     transform: none;
    }
   .col-12 {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
  }
   .img-card .card-content {
     width: 95%;
@@ -1602,11 +1605,11 @@ nav,
 /* --------- START FOOTER SECTION ------- */
 }
 /* ================================== */
-@media screen and (max-width: 575.98px) {
+@media screen and (max-width: 576px) {
   /* ------- START HEADER SECTION ---------- */
   .modal-content{
     max-width: 400px;
-    height: 400px;
+    height: 420px;
     margin: 0 auto;
   }
   #modal-email{
@@ -1625,17 +1628,32 @@ nav,
   .input-cont{
     max-width: 260px;
   }
-  .apple-btn{
+  .input-cont-para>p{
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  .log-btn{
+    font-size: 14px;
+  }
+   .apple-btn{
     width: 120px;
+    height: 45px;
   }
   .google-btn{
     width: 120px;
+    height: 45px;
+  }
+  .apple-img{
+    margin: 0 10px 0 0;
   }
   .btn-cont{
     max-width: 255px !important;
   }
   .input-cont-para{
     margin-top: 10px;
+  }
+  .modal-col{
+    margin: 0;
   }
  
   /* ------- END HEADER SECTION ---------- */
@@ -1770,7 +1788,7 @@ nav,
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 20px;
+   
 }
 
   .img-card {

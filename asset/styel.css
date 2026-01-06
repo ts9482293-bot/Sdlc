@@ -2244,7 +2244,7 @@ nav,
     max-width: 150px;
   }
   .primary-btn {
-    margin: 0;
+    margin: 10px 0;
   }
   .about-cont {
     text-align: center;
@@ -2629,6 +2629,54 @@ nav,
   .apple-img {
     margin: 0 auto;
   }
+   .modal-content{
+    max-width: 400px;
+    height: 420px;
+    margin: 0 auto;
+  }
+  #modal-email{
+    max-width: 260px;
+    margin-bottom: 10px;
+  }
+  #modal-password{
+    max-width: 260px;
+    margin-bottom: 10px;
+  }
+  .modal-btn{
+    padding: 16px 80px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .input-cont{
+    max-width: 260px;
+  }
+  .input-cont-para>p{
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  .log-btn{
+    font-size: 14px;
+  }
+  .apple-btn{
+    width: 120px;
+    height: 45px;
+  }
+  .google-btn{
+    width: 120px;
+    height: 45px;
+  }
+  .apple-img{
+    margin: 0 10px 0 0;
+  }
+  .btn-cont{
+    max-width: 255px !important;
+  }
+  .input-cont-para{
+    margin-top: 10px;
+  }
+  .stars>i{
+    font-size: 15px;
+  }
   .accordion {
     height: 500px;
   }
@@ -2713,12 +2761,18 @@ nav,
   .rating-bubble {
     right: -28%;
     max-width: 140px;
+    height: 120px;
   }
   .rating-bubble > h3 {
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0 0 10px;
+  }
+  .rating-bubble>.brand{
+    font-size: 12px;
   }
   .rating-bubble > .stars {
     font-size: 10px;
+    margin: 0;
   }
 }
 @media screen and (max-width: 400px) {
@@ -2779,8 +2833,12 @@ nav,
   .rating-bubble > h3 {
     font-size: 12px;
   }
-  .rating-bubble > .stars {
-    font-size: 5px;
+  .rating-bubble > .stars>i {
+    font-size: 10px;
+    margin: 0;
+  }
+  .rating-bubble>.brand{
+    font-size: 10px;
   }
   .brand > span {
     font-size: 10px;
