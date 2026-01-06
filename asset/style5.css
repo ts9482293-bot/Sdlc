@@ -1607,6 +1607,9 @@ nav,
 /* ================================== */
 @media screen and (max-width: 576px) {
   /* ------- START HEADER SECTION ---------- */
+    .nav-logo{
+    max-width: 30px;
+  }
   .modal-content{
     max-width: 400px;
     height: 420px;
@@ -1660,6 +1663,7 @@ nav,
   /* --------- START BANNER SECTION -------- */
   .hero {
     height: 45vh;
+    margin-top: 150px;
   }
   .hero-text{
     text-align: center;

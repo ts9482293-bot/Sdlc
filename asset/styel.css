@@ -2005,6 +2005,9 @@ nav,
   }
 }
 @media screen and (max-width: 991px) {
+  .header-sec{
+    padding: 15px 0;
+  }
   .offcanvas {
     flex-direction: column;
     text-align: center;
@@ -2445,6 +2448,9 @@ nav,
   }
 }
 @media screen and (max-width: 576px) {
+  .nav-logo{
+    max-width: 30px;
+  }
   .background-circle {
     left: 25%;
   }
@@ -2605,9 +2611,6 @@ nav,
   }
   .testimonials-sec {
     padding: 30px 0 0;
-  }
-  .nav-logo {
-    max-width: 150px;
   }
   .navbar-toggler-icon {
     width: 25px !important;
@@ -2880,9 +2883,6 @@ nav,
   }
   .choose-container {
     margin-top: 1100px;
-  }
-  .nav-logo {
-    max-width: 130px;
   }
   .left-side {
     font-size: 12px;

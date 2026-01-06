@@ -1318,6 +1318,9 @@ nav,
   } */
 }
 @media screen and (max-width: 576px) {
+    .nav-logo{
+    max-width: 30px;
+  }
   .approach-card {
     margin: 0 auto;
   }
