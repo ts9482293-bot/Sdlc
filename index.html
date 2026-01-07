@@ -210,17 +210,11 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content left-modal">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">
               Create an account
             </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
           </div>
           <div class="modal-body">
             <form action="" class="modal-form" id="modalform">
@@ -241,8 +235,8 @@
                 <div class="col-12 modal-col">
                   <div class="input-cont">
                     <p id="passwordError" class="error"></p>
-                    <label class="modal-lable" for="modal-password"
-                      >password</label
+                    <label class="modal-lable" for="modal-password"></label>
+                      password</label
                     >
                     <br />
                     <input
@@ -254,7 +248,38 @@
                   </div>
                 </div>
                 <div class="col-12 modal-col">
-                  <div class="input-cont btn-cont">
+                  <div class="input-cont">
+                    <p id="passwordError" class="error"></p>
+                    <label class="modal-lable" for="confirm-password"
+                      >Confirm password</label
+                    >
+                    <br />
+                    <input
+                      type="password"
+                      placeholder="Enter Your Password"
+                      name=""
+                      id="confirm-password"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="passwordError" class="error"></p>
+                    <label class="modal-lable" for="modal-password"
+                      >Address</label
+                    >
+                    <br />
+                    <input
+                      type="text"
+                      id="address"
+                      placeholder="Enter your address"
+                      name=""
+                      id=""
+                    />
+                  </div>
+                </div>
+                <div class="col-12 modal-col">
+                  <div class=" btn-cont">
                     <button type="submit" class="modal-btn">
                       Create account
                     </button>
@@ -276,15 +301,47 @@
                     Google
                   </a>
                 </div>
-                <div class="col-12">
+                <!-- <div class="col-12">
                   <div class="input-cont-para">
                     <p>Already have an account ?</p>
                     <a href="" class="log-btn">Log In</a>
                   </div>
+                </div> -->
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-content right-modal">
+         <div class="modal-right-cont">
+          <div class="right-btn-close">
+             <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+           <div class="modal-header modal-right-header">
+            <div class="modal-cont">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Hey There !
+              </h1>
+              <p>
+                Sign in to start planning your journeys, save favorites, and
+                travel with ease.
+              </p>
+            </div>
+            <form action="" class="modal-form" id="modalform">
+              <div class="row modal-row align-items-center">
+                <div class="input-cont btn-cont">
+                  <button type="submit" class="modal-btn">
+                    Create account
+                  </button>
                 </div>
               </div>
             </form>
           </div>
+         </div>
         </div>
       </div>
     </div>
@@ -775,7 +832,7 @@
                 data-aos="zoom-in"
                 data-aos-delay="300"
               >
-                 <div class="card equipment-card" data-aos="zoom-in">
+                <div class="card equipment-card" data-aos="zoom-in">
                   <div class="equipment-img-box">
                     <div class="equipment-card-img">
                       <img
@@ -792,7 +849,7 @@
                 </div>
               </div>
               <div class="swiper-slide equipment-slide">
-              <div class="card equipment-card" data-aos="zoom-in">
+                <div class="card equipment-card" data-aos="zoom-in">
                   <div class="equipment-img-box">
                     <div class="equipment-card-img">
                       <img
@@ -1495,7 +1552,9 @@
                 <li><a href="index4.html" class="footer-link">Blog</a></li>
                 <li><a href="index5.html" class="footer-link">Contct Us</a></li>
                 <li><a href="" class="footer-link">Jobs</a></li>
-                <li><a href="index3.html" class="footer-link">Categories</a></li>
+                <li>
+                  <a href="index3.html" class="footer-link">Categories</a>
+                </li>
               </ul>
             </div>
           </div>

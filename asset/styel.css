@@ -58,7 +58,7 @@ body {
   --header-color: #80a3ff;
   --card-background-color: #c6c6c6;
   --text-color: #141414;
-  --email-background-color: #c8c8c8;
+  --email-background-color: #F4F0F0;
   --social-color: #999999;
   --btn-color: #ccdaff;
   --slider-color: #ffbf00;
@@ -322,20 +322,52 @@ nav,
   max-width: 77px;
   font-size: 16px;
 }
-.modal-content {
-  max-width: 550px;
-  height: 550px;
+.modal-dialog{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 15px;
   border-radius: 20px;
-  background: var(--offcanvsbckground-color);
+}
+.modal-content {
+  max-width: 700px;
+  height: 750px;
+  border-radius: 0;
+  background: var(--secondary-color);
   /* text-align: center; */
 }
+.right-modal{
+ background: linear-gradient(
+  to right,
+  #1052FF 55%,
+  #1052FF 90%,
+  #5C82FF 100%
+);
+display: flex;
+align-items: center;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+/* width: 50%; */
+}
+.left-modal{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.modal-body-right{
+  height: 45px !important;
+}
+.modal-cont{
+  text-align: center;
+  color: var(--secondary-color);
+}
 .input-cont {
-  max-width: 406px;
+  max-width: 556px;
   margin: 0 auto;
   /* display: flex; */
 }
 .modal-title {
-  margin: 0 0 0 auto;
+  /* margin: 0 0 0 auto; */
   text-align: center;
 }
 /* .modal-col{
@@ -343,25 +375,46 @@ nav,
   flex-direction: column;
 } */
 #modal-email {
-  width: 406px;
+  width: 556px;
   height: 48px;
   border: none;
   outline: none;
   border-radius: 20px;
   margin: 0 auto 24px;
   padding-left: 20px;
+  background: var(--email-background-color);
 }
 #modal-password {
-  width: 406px;
+  width: 556px;
   height: 48px;
   border: none;
   outline: none;
   border-radius: 20px;
   margin: 0 auto 24px;
   padding-left: 20px;
+   background: var(--email-background-color);
+}
+#confirm-password {
+  width: 556px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin: 0 auto 24px;
+   background: var(--email-background-color);
+}
+#address {
+  width: 556px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 20px;
+   background: var(--email-background-color);
 }
 .modal-btn {
-  padding: 16px 139px;
+  padding: 14.5px 46px;
   background: var(--hover-color);
   border-radius: 20px;
   color: var(--secondary-color);
@@ -378,17 +431,17 @@ nav,
   content: "";
   position: absolute;
   top: 0;
-  width: 50%;
+  width: 51%;
   height: 100%;
   background: var(--secondary-color);
   z-index: -1;
   transition: 0.4s ease;
 }
 .modal-btn::before {
-  left: -50%;
+  left: -51%;
 }
 .modal-btn::after {
-  right: -50%;
+  right: -51%;
 }
 .modal-btn:hover::before {
   left: 0;
@@ -402,11 +455,19 @@ nav,
 }
 .modal-header {
   border: none;
+  flex-direction: column;
+  text-align: center;
+}
+.modal-right-header{
+  margin-top: 150px;
+}
+.right-btn-close{
+ text-align: right;
 }
 .apple-btn {
   display: flex;
   align-items: center;
-  width: 191px;
+  width: 266px;
   height: 48px;
   justify-content: center;
   border-radius: 20px;
@@ -421,7 +482,7 @@ nav,
   content: "";
   width: 50%;
   height: 100%;
-  background: var(--secondary-color);
+  background: var(--hover-color);
   position: absolute;
   top: 0;
   z-index: -1;
@@ -439,6 +500,9 @@ nav,
 .apple-btn:hover::before {
   left: 0;
 }
+.apple-btn:hover{
+  color: var(--secondary-color);
+}
 .apple-img {
   width: 20px;
   margin: 0 5px 0 0;
@@ -451,7 +515,7 @@ nav,
 .google-btn {
   display: flex;
   align-items: center;
-  width: 191px;
+  width: 266px;
   height: 48px;
   justify-content: center;
   border-radius: 20px;
@@ -465,7 +529,7 @@ nav,
   content: "";
   width: 50%;
   height: 100%;
-  background: var(--secondary-color);
+  background: var(--hover-color);
   position: absolute;
   top: 0;
   transition: all 0.4s ease;
@@ -483,8 +547,15 @@ nav,
 .google-btn:hover::before {
   left: 0;
 }
+.google-btn:hover{
+  color: var(--secondary-color);
+}
 .log-btn:hover {
   color: var(--border-color);
+}
+.btn-cont{
+  text-align: center;
+  margin: 32px 0 0;
 }
 .input-cont-para {
   max-width: 271px;
@@ -501,7 +572,9 @@ nav,
   border-color: #5b7cfa;
   box-shadow: 0 0 0 2px rgba(91, 124, 250, 0.2);
 }
-
+.btn-close{
+  padding: 10px 5px;
+}
 .input-cont input:focus {
   border-color: #4f46e5;
 }
@@ -1969,6 +2042,23 @@ nav,
   /* .banner-img {
    max-width: 700px;
   } */
+   #modal-email,
+   #modal-password,
+   #confirm-password,
+   #address{
+    width: 406px;
+   }
+   .input-cont{
+    max-width: 406px;
+    margin: 0 auto;
+   }
+   .btn-cont{
+    margin-top: 32px;
+   }
+   .apple-btn,
+   .google-btn{
+    width: 170px;
+   }
   .card-text {
     margin: 10px 0 20px;
   }
@@ -2081,6 +2171,19 @@ nav,
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%232662fd' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
+  .modal-content{
+    max-width: 600px;
+  }
+  .right-modal{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .left-modal{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+  }
   .banner-img {
     max-width: 100%;
     height: auto;
@@ -2186,6 +2289,10 @@ nav,
   }
   .title3 {
     font-size: 28px;
+  }
+  .modal-dialog{
+    flex-direction: column-reverse;
+    align-items: center;
   }
   .home-col {
     margin-top: 120px;
@@ -2676,19 +2783,27 @@ nav,
   }
   .modal-content {
     max-width: 400px;
-    height: 420px;
+    height: 580px;
     margin: 0 auto;
   }
   #modal-email {
-    max-width: 260px;
+    max-width: 250px;
     margin-bottom: 10px;
   }
   #modal-password {
-    max-width: 260px;
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+   #confirm-password {
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+   #address {
+    max-width: 250px;
     margin-bottom: 10px;
   }
   .modal-btn {
-    padding: 16px 80px;
+    padding: 16px 26px;
     margin-bottom: 10px;
     font-size: 12px;
   }
@@ -2713,9 +2828,9 @@ nav,
   .apple-img {
     margin: 0 10px 0 0;
   }
-  .btn-cont {
+  /* .btn-cont {
     max-width: 255px !important;
-  }
+  } */
   .input-cont-para {
     margin-top: 10px;
   }
@@ -2820,7 +2935,7 @@ nav,
     margin: 0;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .banner-sub-img {
     right: 25%;
   }
@@ -2832,6 +2947,9 @@ nav,
   }
   .star-card {
     font-size: 10px;
+  }
+   .right-btn-close{
+   text-align: right;
   }
   .title1 {
     font-size: 28px;
