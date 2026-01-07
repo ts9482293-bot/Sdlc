@@ -49,46 +49,70 @@
         <nav class="nav-top">
           <ul class="nav-top-list">
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                data-fancybox
+                data-type="iframe"
+                data-src="https://www.google.com/maps?q=Kolkata&output=embed"
+                href="javascript:;"
+                class="map-btn nav-top-link"
+              >
                 <i class="bi bi-geo-alt"></i>
                 <span>657 twin lakes Drive, Reno,NV 89523</span>
               </a>
+              <!-- <a href="" class="nav-top-link">
+                <i class="bi bi-geo-alt"></i>
+                <span>657 twin lakes Drive, Reno,NV 89523</span>
+              </a> -->
             </li>
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=support@localpro.com"
+                target="_blank"
+                class="nav-top-link"
+              >
                 <i class="fa-regular fa-envelope"></i>
                 <span>support@localpro.com</span>
               </a>
             </li>
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                data-fancybox
+                data-src="#dailyOpenTime"
+                href="javascript:;"
+                class="nav-top-link"
+              >
                 <i class="fa-regular fa-calendar"></i>
-                <span>Daily 09am - 10pm</span>
+                <span id="openText">Daily 9am-10pm</span>
               </a>
             </li>
           </ul>
           <ul class="social-list">
-             <li>
-              <a href="" class="follow-link"
-                >Follow Us:</a>
+            <li>
+              <a href="" class="follow-link">Follow Us:</a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a
+                href="https://www.facebook.com/LocalProServices"
+                class="social-link"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a
+                href="https://www.linkedin.com/company/localpro-services"
+                class="social-link"
                 ><i class="fa-brands fa-linkedin-in"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a
+                href="https://www.youtube.com/@LocalProServices"
+                class="social-link"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://x.com/LocalProServices" class="social-link"
                 ><i class="fa-brands fa-x-twitter"></i>
               </a>
             </li>
@@ -98,7 +122,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <div class="nav-logo">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
               <img src="./images/Group 1000004669.png" alt="" />
             </a>
           </div>
@@ -139,11 +163,11 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  services
+                  Services
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="index3.html">services</a>
+                    <a class="dropdown-item" href="index3.html">Services</a>
                   </li>
                   <li><a class="dropdown-item" href="#">Plumber</a></li>
                   <li><a class="dropdown-item" href="#">Electrician</a></li>
@@ -168,7 +192,7 @@
                 class="primary-btn"
                 data-bs-target="#staticBackdrop"
               >
-                Sing In
+                Sign In
               </a>
             </div>
           </div>
@@ -275,7 +299,6 @@
           <div class="row align-items-center">
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
               <div class="banner-cont" data-aos="fade-up" data-aos-delay="150">
-                <h4 class="title5">Choose Better, Get Served Faster</h4>
                 <h1 class="title1 luxy-el" data-speed="-0.1">
                   Quick Home Service Booking Best Local Experts -<span
                     class="hand-underline"
@@ -288,7 +311,14 @@
                   help fast. Schedule your pro now! 
                 </p>
                 <div class="banner-btn">
-                  <a href="" class="book-btn">Call Us Today</a>
+                  <a
+                    href="tel:+912345678780"
+                    onclick="return confirm('Call LocalPro now?')"
+                    class="book-btn"
+                  >
+                    Call Us Today
+                  </a>
+                  <!-- <a href="" class="book-btn">Call Us Today</a> -->
                   <a
                     href="https://youtu.be/IJCEpbIHTa8?si=ZhmIwgUwCDNz4vCC"
                     data-fancybox
@@ -357,7 +387,7 @@
           <div class="row">
             <div class="col-xxl-9 col-xl-8 col-lg-8 col-12">
               <div class="services-header" data-aos="fade-right">
-                <h3 class="title3">OURE SERVICES</h3>
+                <h3 class="title3">OUR SERVICES</h3>
               </div>
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-4 col-12">
@@ -745,24 +775,7 @@
                 data-aos="zoom-in"
                 data-aos-delay="300"
               >
-                <div class="card equipment-card" data-aos="zoom-in">
-                  <div class="equipment-img-box">
-                    <div class="equipment-card-img">
-                      <img
-                        src="./images/Rectangle 10.png"
-                        class="card-img-top"
-                        alt="..."
-                      />
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <h5 class="equipment-card-title">Boach 59hz</h5>
-                    <h4 class="title4">Cleaner</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide equipment-slide">
-                <div class="card equipment-card" data-aos="zoom-in">
+                 <div class="card equipment-card" data-aos="zoom-in">
                   <div class="equipment-img-box">
                     <div class="equipment-card-img">
                       <img
@@ -774,6 +787,23 @@
                   </div>
                   <div class="card-body">
                     <h5 class="equipment-card-title">Batch VAC 15</h5>
+                    <h4 class="title4">Cleaner</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide equipment-slide">
+              <div class="card equipment-card" data-aos="zoom-in">
+                  <div class="equipment-img-box">
+                    <div class="equipment-card-img">
+                      <img
+                        src="./images/Rectangle 10.png"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="equipment-card-title">Boach 59hz</h5>
                     <h4 class="title4">Cleaner</h4>
                   </div>
                 </div>
@@ -1065,7 +1095,7 @@
             </div>
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-12">
               <div class="header-btn" data-aos="fade-left">
-                <a href="" class="explore-btn review-explore-btn"
+                <a href="index3.html" class="explore-btn review-explore-btn"
                   >Explore All</a
                 >
               </div>
@@ -1345,10 +1375,18 @@
                 <h2 class="title2">Services and order trust us!</h2>
                 <div class="app-box">
                   <div class="play-store-img">
-                    <img src="./images/Group 84.png" alt="" />
+                    <a
+                      href="https://play.google.com/store/apps/details?id=ca.homedepot.proreferral"
+                    >
+                      <img src="./images/Group 84.png" alt=""
+                    /></a>
                   </div>
                   <div class="apple-store-img">
-                    <img src="./images/Group 85.png" alt="" />
+                    <a
+                      href="https://apps.apple.com/ca/app/local-pro/id1434304989?utm_source=chatgpt.com"
+                    >
+                      <img src="./images/Group 85.png" alt=""
+                    /></a>
                   </div>
                 </div>
               </div>
@@ -1415,22 +1453,34 @@
               <div class="footer-social">
                 <ul>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://www.facebook.com/LocalProServices"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://www.linkedin.com/company/localpro-services"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://www.youtube.com/@LocalProServices"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-youtube"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://x.com/LocalProServices"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-x-twitter"></i>
                     </a>
                   </li>
@@ -1442,10 +1492,10 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Site Links</div>
               <ul>
-                <li><a href="" class="footer-link">Blog</a></li>
-                <li><a href="" class="footer-link">Contct Us</a></li>
+                <li><a href="index4.html" class="footer-link">Blog</a></li>
+                <li><a href="index5.html" class="footer-link">Contct Us</a></li>
                 <li><a href="" class="footer-link">Jobs</a></li>
-                <li><a href="" class="footer-link">Categories</a></li>
+                <li><a href="index3.html" class="footer-link">Categories</a></li>
               </ul>
             </div>
           </div>
@@ -1453,10 +1503,48 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Popular Cities</div>
               <ul>
-                <li><a href="" class="footer-link">Ballston</a></li>
-                <li><a href="" class="footer-link">Lake</a></li>
-                <li><a href="" class="footer-link">Brooklyn</a></li>
-                <li><a href="" class="footer-link">Cambridge</a></li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Ballston,+VA&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Ballston</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Lake+City&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Lake</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Brooklyn,+NY&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                  >
+                    Brooklyn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Cambridge,+UK&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Cambridge</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -1475,24 +1563,38 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Contact Info</div>
               <ul>
-                <li><a href="" class="footer-link"> India</a></li>
                 <li>
-                  <a href="" class="footer-link">
-                    <span> <i class="fa-solid fa-phone"></i></span>
-                    +912345678780</a
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=India&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
                   >
+                    India
+                  </a>
                 </li>
                 <li>
-                  <a href="" class="footer-link">
-                    <span> <i class="fa-solid fa-phone"></i></span>
-                    +913556484550</a
-                  >
+                  <a href="tel:+912345678780" class="footer-link">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    +91 23456 78780
+                  </a>
                 </li>
                 <li>
-                  <a href="" class="footer-link">
+                  <a href="tel:+913556484550" class="footer-link">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    +91 35564 84550
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&to=support@localpro.com"
+                    target="_blank"
+                    class="footer-link"
+                  >
                     <span><i class="fa-regular fa-envelope"></i></span>
-                    hellofixcart@gmail.com</a
-                  >
+                    hellofixcart@gmail.com
+                  </a>
                 </li>
               </ul>
             </div>
@@ -1504,7 +1606,9 @@
               >
                 <div class="side-box">
                   <div class="left-side"><a href="">Copyright 2025</a></div>
-                  <div class="right-side"><a href="">Aone Theme. All Right Reserved</a></div>
+                  <div class="right-side">
+                    <a href="">Aone Theme. All Right Reserved</a>
+                  </div>
                 </div>
               </div>
               <div
@@ -1515,10 +1619,10 @@
                     <a href=""><img src="./images/image 72.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
-                   <a href=""><img src="./images/image 72.png" alt="" /></a>
+                    <a href=""><img src="./images/card-img2.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
-                   <a href=""> <img src="./images/736785 2.png" alt="" /></a>
+                    <a href=""> <img src="./images/736785 2.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
                     <a href=""><img src="./images/image 71.png " alt="" /></a>
@@ -1530,13 +1634,24 @@
         </div>
       </div>
     </footer>
+    <!-- 🔽 Fancybox hidden content (HERE) -->
+    <div style="display: none" id="dailyOpenTime">
+      <div class="time-popup">
+        <h3>Opening Hours</h3>
+        <ul>
+          <li>Mon – Fri: 09:00 AM – 10:00 PM</li>
+          <li>Saturday: 09:00 AM – 08:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+    </div>
     <!-- luxy-js -->
     <script src="https://cdn.jsdelivr.net/npm/luxy.js@1.0.0/dist/luxy.min.js"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- swiper-js -->
-     <!-- venila-js -->
-      <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <!-- venila-js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- fancy-box-js -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>

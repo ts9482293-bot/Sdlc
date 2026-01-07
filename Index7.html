@@ -37,15 +37,21 @@
       crossorigin="anonymous"
     />
     <!-- custom-css -->
-    <link rel="stylesheet" href="asset/style7.css">
+    <link rel="stylesheet" href="asset/style7.css" />
   </head>
   <body>
-    <header class="header-sec" class="luxy-el" data-speed="0.08">
+    <header class="header-sec">
       <div class="container">
         <nav class="nav-top">
           <ul class="nav-top-list">
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                data-fancybox
+                data-type="iframe"
+                data-src="https://www.google.com/maps?q=Kolkata&output=embed"
+                href="javascript:;"
+                class="map-btn nav-top-link"
+              >
                 <i class="bi bi-geo-alt"></i>
                 <span>657 twin lakes Drive, Reno,NV 89523</span>
               </a>
@@ -57,9 +63,14 @@
               </a>
             </li>
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                data-fancybox
+                data-src="#dailyOpenTime"
+                href="javascript:;"
+                class="nav-top-link"
+              >
                 <i class="fa-regular fa-calendar"></i>
-                <span>Daily 09am - 10pm</span>
+                <span id="openText">Daily 9am-10pm</span>
               </a>
             </li>
           </ul>
@@ -68,22 +79,28 @@
               <a href="" class="follow-link">Follow Us:</a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a
+                href="https://www.facebook.com/LocalProServices"
+                class="social-link"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a
+                href="https://www.linkedin.com/company/localpro-services"
+                class="social-link"
                 ><i class="fa-brands fa-linkedin-in"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a
+                href="https://www.youtube.com/@LocalProServices"
+                class="social-link"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://x.com/LocalProServices" class="social-link"
                 ><i class="fa-brands fa-x-twitter"></i>
               </a>
             </li>
@@ -264,14 +281,16 @@
       <section class="checkout-banner">
         <div class="container banner-container">
           <h1 data-aos="fade-up">Checkout</h1>
-          <p data-aos="fade-up" data-aos-delay="200"><a class="checkout-home" href="#">home</a> / Checkout</p>
+          <p data-aos="fade-up" data-aos-delay="200">
+            <a class="checkout-home" href="#">home</a> / Checkout
+          </p>
         </div>
       </section>
       <section class="checkout-section">
         <div class="container">
           <form action="" method="post">
             <div class="row">
-              <div class="col-5 checkout-form"  data-aos="fade-right">
+              <div class="col-5 checkout-form" data-aos="fade-right">
                 <div class="form-field">
                   <label>Email address</label>
                   <input id="checkout-email" />
@@ -337,7 +356,7 @@
                   placeholder="9:00 AM - 10:00 AM"
                 />
               </div>
-              <div class="col-5  checkout-summary" data-aos="fade-left">
+              <div class="col-5 checkout-summary" data-aos="fade-left">
                 <h3>Your Booking</h3>
                 <div class="booking-summary">
                   <div class="summary-header">
@@ -445,22 +464,34 @@
               <div class="footer-social">
                 <ul>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://www.facebook.com/LocalProServices"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://www.linkedin.com/company/localpro-services"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://www.youtube.com/@LocalProServices"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-youtube"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="" class="footer-social-link">
+                    <a
+                      href="https://x.com/LocalProServices"
+                      class="footer-social-link"
+                    >
                       <i class="fa-brands fa-x-twitter"></i>
                     </a>
                   </li>
@@ -472,10 +503,12 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Site Links</div>
               <ul>
-                <li><a href="" class="footer-link">Blog</a></li>
-                <li><a href="" class="footer-link">Contct Us</a></li>
+                <li><a href="index4.html" class="footer-link">Blog</a></li>
+                <li><a href="index5.html" class="footer-link">Contct Us</a></li>
                 <li><a href="" class="footer-link">Jobs</a></li>
-                <li><a href="" class="footer-link">Categories</a></li>
+                <li>
+                  <a href="index3.html" class="footer-link">Categories</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -483,10 +516,48 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Popular Cities</div>
               <ul>
-                <li><a href="" class="footer-link">Ballston</a></li>
-                <li><a href="" class="footer-link">Lake</a></li>
-                <li><a href="" class="footer-link">Brooklyn</a></li>
-                <li><a href="" class="footer-link">Cambridge</a></li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Ballston,+VA&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Ballston</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Lake+City&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Lake</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Brooklyn,+NY&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                  >
+                    Brooklyn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Cambridge,+UK&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Cambridge</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -505,24 +576,38 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Contact Info</div>
               <ul>
-                <li><a href="" class="footer-link"> India</a></li>
                 <li>
-                  <a href="" class="footer-link">
-                    <span> <i class="fa-solid fa-phone"></i></span>
-                    +912345678780</a
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=India&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
                   >
+                    India
+                  </a>
                 </li>
                 <li>
-                  <a href="" class="footer-link">
-                    <span> <i class="fa-solid fa-phone"></i></span>
-                    +913556484550</a
-                  >
+                  <a href="tel:+912345678780" class="footer-link">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    +91 23456 78780
+                  </a>
                 </li>
                 <li>
-                  <a href="" class="footer-link">
+                  <a href="tel:+913556484550" class="footer-link">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    +91 35564 84550
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&to=support@localpro.com"
+                    target="_blank"
+                    class="footer-link"
+                  >
                     <span><i class="fa-regular fa-envelope"></i></span>
-                    hellofixcart@gmail.com</a
-                  >
+                    hellofixcart@gmail.com
+                  </a>
                 </li>
               </ul>
             </div>
@@ -532,30 +617,43 @@
           <div class="row footer-row align-items-center">
             <div class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12">
               <div class="side-box">
-               <div class="left-side"><a href="">Copyright 2025</a></div>
-                  <div class="right-side"><a href="">Aone Theme. All Right Reserved</a></div>
+                <div class="left-side"><a href="">Copyright 2025</a></div>
+                <div class="right-side">
+                  <a href="">Aone Theme. All Right Reserved</a>
+                </div>
               </div>
             </div>
             <div class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12">
               <div class="footer-low-img-cont">
-               <div class="footer-lower-img">
-                    <a href=""><img src="./images/image 72.png" alt="" /></a>
-                  </div>
-                  <div class="footer-lower-img">
-                   <a href=""><img src="./images/image 72.png" alt="" /></a>
-                  </div>
-                  <div class="footer-lower-img">
-                   <a href=""> <img src="./images/736785 2.png" alt="" /></a>
-                  </div>
-                  <div class="footer-lower-img">
-                    <a href=""><img src="./images/image 71.png " alt="" /></a>
-                  </div>
+                <div class="footer-lower-img">
+                  <a href=""><img src="./images/image 72.png" alt="" /></a>
+                </div>
+                <div class="footer-lower-img">
+                  <a href=""><img src="./images/card-img2.png" alt="" /></a>
+                </div>
+                <div class="footer-lower-img">
+                  <a href=""> <img src="./images/736785 2.png" alt="" /></a>
+                </div>
+                <div class="footer-lower-img">
+                  <a href=""><img src="./images/image 71.png " alt="" /></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <!-- 🔽 Fancybox hidden content (HERE) -->
+    <div style="display: none" id="dailyOpenTime">
+      <div class="time-popup">
+        <h3>Opening Hours</h3>
+        <ul>
+          <li>Mon – Fri: 09:00 AM – 10:00 PM</li>
+          <li>Saturday: 09:00 AM – 08:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+    </div>
     <!-- aos-js -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <!-- fancy-box-js -->

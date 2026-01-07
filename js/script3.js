@@ -55,10 +55,34 @@ const form = document.getElementById("modalform");
     }
   });
 
+  let lastScrollTop = 0;
+  const navbar = document.querySelector(".header-sec");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // scrolling down
+      navbar.classList.add("nav-hide");
+    } else {
+      // scrolling up
+      navbar.classList.remove("nav-hide");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
 
   AOS.init({
     duration: 1000,
     easing: "ease-in-out",
     once: true,
     offset: 120
+  });
+
+   Fancybox.bind("[data-fancybox]", {
+    placeFocusBack: false,
+    trapFocus: false,
+    iframe: {
+      preload: false,
+    },
   });

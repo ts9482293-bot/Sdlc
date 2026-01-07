@@ -19,6 +19,11 @@
     />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- fancy-box-css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
     <!-- bootstrap-css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -31,51 +36,65 @@
   </head>
   <body>
     <!-- nav-sec -->
-    <header class="header-sec" class="luxy-el" data-speed="0.08">
+    <header class="header-sec">
       <div class="container">
         <nav class="nav-top">
           <ul class="nav-top-list">
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                data-fancybox
+                data-type="iframe"
+                data-src="https://www.google.com/maps?q=Kolkata&output=embed"
+                href="javascript:;"
+                class="map-btn nav-top-link"
+              >
                 <i class="bi bi-geo-alt"></i>
                 <span>657 twin lakes Drive, Reno,NV 89523</span>
               </a>
             </li>
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=support@localpro.com"
+                target="_blank"
+                class="nav-top-link"
+              >
                 <i class="fa-regular fa-envelope"></i>
                 <span>support@localpro.com</span>
               </a>
             </li>
             <li>
-              <a href="" class="nav-top-link">
+               <a
+                data-fancybox
+                data-src="#dailyOpenTime"
+                href="javascript:;"
+                class="nav-top-link"
+              >
                 <i class="fa-regular fa-calendar"></i>
-                <span>Daily 09am - 10pm</span>
+                <span id="openText">Daily 9am-10pm</span>
               </a>
             </li>
           </ul>
           <ul class="social-list">
-             <li>
-              <a href="" class="follow-link"
-                >Follow Us:</a>
+          <li>
+              <a href="" class="follow-link">Follow Us:</a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://www.facebook.com/LocalProServices" class="social-link"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://www.linkedin.com/company/localpro-services" class="social-link"
                 ><i class="fa-brands fa-linkedin-in"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://www.youtube.com/@LocalProServices" class="social-link"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://x.com/LocalProServices" class="social-link"
                 ><i class="fa-brands fa-x-twitter"></i>
               </a>
             </li>
@@ -129,7 +148,9 @@
                   services
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="index3.html">services</a></li>
+                  <li>
+                    <a class="dropdown-item" href="index3.html">services</a>
+                  </li>
                   <li><a class="dropdown-item" href="#">Plumber</a></li>
                   <li><a class="dropdown-item" href="#">Electrician</a></li>
                   <li><hr class="dropdown-divider" /></li>
@@ -153,7 +174,7 @@
                 class="primary-btn"
                 data-bs-target="#staticBackdrop"
               >
-                Sing In
+                Sign In
               </a>
             </div>
           </div>
@@ -187,33 +208,39 @@
             <form action="" class="modal-form" id="modalform">
               <div class="row modal-row align-items-center">
                 <div class="col-12">
-                <div class="input-cont">
-                   <p id="emailError" class="error"></p>
-                    <label class="modal-lable" for="modal-email">Email</label> <br />
-                  <input
-                    type="email"
-                    placeholder="Enter Your Email"
-                    name=""
-                    id="modal-email"
-                  />
-                </div>
+                  <div class="input-cont">
+                    <p id="emailError" class="error"></p>
+                    <label class="modal-lable" for="modal-email">Email</label>
+                    <br />
+                    <input
+                      type="email"
+                      placeholder="Enter Your Email"
+                      name=""
+                      id="modal-email"
+                    />
+                  </div>
                 </div>
                 <div class="col-12 modal-col">
                   <div class="input-cont">
                     <p id="passwordError" class="error"></p>
-                    <label class="modal-lable" for="modal-password">password</label> <br />
-                  <input
-                    type="password"
-                    placeholder="Enter Your Password"
-                    name=""
-                    id="modal-password"
-                  />
+                    <label class="modal-lable" for="modal-password"
+                      >password</label
+                    >
+                    <br />
+                    <input
+                      type="password"
+                      placeholder="Enter Your Password"
+                      name=""
+                      id="modal-password"
+                    />
                   </div>
                 </div>
                 <div class="col-12 modal-col">
-                 <div class="input-cont btn-cont">
-                  <button type="submit" class="modal-btn">Create account</button>
-                 </div>
+                  <div class="input-cont btn-cont">
+                    <button type="submit" class="modal-btn">
+                      Create account
+                    </button>
+                  </div>
                 </div>
                 <div class="col-6">
                   <a href="" class="apple-btn">
@@ -418,16 +445,16 @@
             </div>
 
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-12 electric-col">
-             <div class="electic-img-wraper">
-               <div class="electric-img" data-aos="zoom-in">
-                <img src="./imges2/Subtract.png" alt="" />
-                <!-- <div class="top-corner"></div>
+              <div class="electic-img-wraper">
+                <div class="electric-img" data-aos="zoom-in">
+                  <img src="./imges2/Subtract.png" alt="" />
+                  <!-- <div class="top-corner"></div>
                 <div class="bottom-corner"></div> -->
-                <figure class="electric-sub-img">
-                  <img src="./imges2/Rectangle 13.png" alt="" />
-                </figure>
+                  <figure class="electric-sub-img">
+                    <img src="./imges2/Rectangle 13.png" alt="" />
+                  </figure>
+                </div>
               </div>
-             </div>
             </div>
           </div>
         </div>
@@ -627,10 +654,10 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Site Links</div>
               <ul>
-                <li><a href="" class="footer-link">Blog</a></li>
-                <li><a href="" class="footer-link">Contct Us</a></li>
+                 <li><a href="index4.html" class="footer-link">Blog</a></li>
+                <li><a href="index5.html" class="footer-link">Contct Us</a></li>
                 <li><a href="" class="footer-link">Jobs</a></li>
-                <li><a href="" class="footer-link">Categories</a></li>
+                <li><a href="index3.html" class="footer-link">Categories</a></li>
               </ul>
             </div>
           </div>
@@ -638,10 +665,48 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Popular Cities</div>
               <ul>
-                <li><a href="" class="footer-link">Ballston</a></li>
-                <li><a href="" class="footer-link">Lake</a></li>
-                <li><a href="" class="footer-link">Brooklyn</a></li>
-                <li><a href="" class="footer-link">Cambridge</a></li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Ballston,+VA&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Ballston</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Lake+City&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Lake</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Brooklyn,+NY&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                  >
+                    Brooklyn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    data-fancybox
+                    data-type="iframe"
+                    data-src="https://www.google.com/maps?q=Cambridge,+UK&output=embed"
+                    href="javascript:;"
+                    class="footer-link"
+                    >Cambridge</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -688,22 +753,24 @@
                 class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12"
               >
                 <div class="side-box">
-                   <div class="left-side"><a href="">Copyright 2025</a></div>
-                  <div class="right-side"><a href="">Aone Theme. All Right Reserved</a></div>
+                  <div class="left-side"><a href="">Copyright 2025</a></div>
+                  <div class="right-side">
+                    <a href="">Aone Theme. All Right Reserved</a>
+                  </div>
                 </div>
               </div>
               <div
                 class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12"
               >
                 <div class="footer-low-img-cont">
-                 <div class="footer-lower-img">
+                  <div class="footer-lower-img">
                     <a href=""><img src="./images/image 72.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
-                   <a href=""><img src="./images/image 72.png" alt="" /></a>
+                    <a href=""><img src="./images/card-img2.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
-                   <a href=""> <img src="./images/736785 2.png" alt="" /></a>
+                    <a href=""> <img src="./images/736785 2.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
                     <a href=""><img src="./images/image 71.png " alt="" /></a>
@@ -715,8 +782,21 @@
         </div>
       </div>
     </footer>
+     <!-- 🔽 Fancybox hidden content (HERE) -->
+<div style="display:none;" id="dailyOpenTime">
+  <div class="time-popup">
+    <h3>Opening Hours</h3>
+    <ul>
+      <li>Mon – Fri: 09:00 AM – 10:00 PM</li>
+      <li>Saturday: 09:00 AM – 08:00 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </div>
+</div>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- fancy-box-js -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <!-- bootstrap-js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

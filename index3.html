@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDLC</title>
+    <!-- fancy-box-css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
     <!-- swiper-css -->
     <link
       rel="stylesheet"
@@ -33,51 +38,65 @@
   </head>
   <body>
     <!-- nav-sec -->
-    <header class="header-sec" class="luxy-el" data-speed="0.08">
+    <header class="header-sec" >
       <div class="container">
         <nav class="nav-top">
           <ul class="nav-top-list">
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                data-fancybox
+                data-type="iframe"
+                data-src="https://www.google.com/maps?q=Kolkata&output=embed"
+                href="javascript:;"
+                class="map-btn nav-top-link"
+              >
                 <i class="bi bi-geo-alt"></i>
                 <span>657 twin lakes Drive, Reno,NV 89523</span>
               </a>
             </li>
             <li>
-              <a href="" class="nav-top-link">
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=support@localpro.com"
+                target="_blank"
+                class="nav-top-link"
+              >
                 <i class="fa-regular fa-envelope"></i>
                 <span>support@localpro.com</span>
               </a>
             </li>
             <li>
-              <a href="" class="nav-top-link">
+            <a
+                data-fancybox
+                data-src="#dailyOpenTime"
+                href="javascript:;"
+                class="nav-top-link"
+              >
                 <i class="fa-regular fa-calendar"></i>
-                <span>Daily 09am - 10pm</span>
+                <span id="openText">Daily 9am-10pm</span>
               </a>
             </li>
           </ul>
           <ul class="social-list">
-             <li>
-              <a href="" class="follow-link"
-                >Follow Us:</a>
+           <li>
+              <a href="" class="follow-link">Follow Us:</a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://www.facebook.com/LocalProServices" class="social-link"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://www.linkedin.com/company/localpro-services" class="social-link"
                 ><i class="fa-brands fa-linkedin-in"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://www.youtube.com/@LocalProServices" class="social-link"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </li>
             <li>
-              <a href="" class="social-link"
+              <a href="https://x.com/LocalProServices" class="social-link"
                 ><i class="fa-brands fa-x-twitter"></i>
               </a>
             </li>
@@ -485,7 +504,7 @@
               <!-- Slide 6 -->
               <div class="swiper-slide">
                 <div class="slider-wrap" data-aos="fade-up">
-                  <div class="service-card" >
+                  <div class="service-card">
                     <div class="card-img">
                       <img
                         src="./asstest/Rectangle 9 (2).png"
@@ -730,10 +749,10 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Site Links</div>
               <ul>
-                <li><a href="" class="footer-link">Blog</a></li>
-                <li><a href="" class="footer-link">Contct Us</a></li>
+                  <li><a href="index4.html" class="footer-link">Blog</a></li>
+                <li><a href="index5.html" class="footer-link">Contct Us</a></li>
                 <li><a href="" class="footer-link">Jobs</a></li>
-                <li><a href="" class="footer-link">Categories</a></li>
+                <li><a href="index3.html" class="footer-link">Categories</a></li>
               </ul>
             </div>
           </div>
@@ -791,22 +810,24 @@
                 class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12"
               >
                 <div class="side-box">
-                   <div class="left-side"><a href="">Copyright 2025</a></div>
-                  <div class="right-side"><a href="">Aone Theme. All Right Reserved</a></div>
+                  <div class="left-side"><a href="">Copyright 2025</a></div>
+                  <div class="right-side">
+                    <a href="">Aone Theme. All Right Reserved</a>
+                  </div>
                 </div>
               </div>
               <div
                 class="footer-col col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12"
               >
                 <div class="footer-low-img-cont">
-                <div class="footer-lower-img">
+                  <div class="footer-lower-img">
                     <a href=""><img src="./images/image 72.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
-                   <a href=""><img src="./images/image 72.png" alt="" /></a>
+                    <a href=""><img src="./images/card-img2.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
-                   <a href=""> <img src="./images/736785 2.png" alt="" /></a>
+                    <a href=""> <img src="./images/736785 2.png" alt="" /></a>
                   </div>
                   <div class="footer-lower-img">
                     <a href=""><img src="./images/image 71.png " alt="" /></a>
@@ -818,8 +839,21 @@
         </div>
       </div>
     </footer>
+     <!-- 🔽 Fancybox hidden content (HERE) -->
+<div style="display:none;" id="dailyOpenTime">
+  <div class="time-popup">
+    <h3>Opening Hours</h3>
+    <ul>
+      <li>Mon – Fri: 09:00 AM – 10:00 PM</li>
+      <li>Saturday: 09:00 AM – 08:00 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </div>
+</div>
     <!-- aos-js -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- fancy-box-js -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <!-- swiper-js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- bootstrap-js -->

@@ -4,10 +4,11 @@ var swiper = new Swiper(".myswiper", {
   pagination: {
     el: ".swiper-pagination",
   },
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+     pauseOnMouseEnter: true,
+  },
 });
 const swiper2 = new Swiper(".trustslider", {
   loop: true,
@@ -20,6 +21,7 @@ const swiper2 = new Swiper(".trustslider", {
   autoplay: {
     delay: 0, // no pause
     disableOnInteraction: false,
+     pauseOnMouseEnter: true,
   },
 
   allowTouchMove: false, // no user dragging (optional)
@@ -33,6 +35,7 @@ var swiper3 = new Swiper(".equipment-swiper", {
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
+     pauseOnMouseEnter: true,
   },
 });
 var swiper4 = new Swiper(".services-swiper", {
@@ -47,6 +50,7 @@ var swiper4 = new Swiper(".services-swiper", {
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
+     pauseOnMouseEnter: true,
   },
 
   allowTouchMove: false,
@@ -67,6 +71,7 @@ var swiper5 = new Swiper(".card-swiper", {
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
+     pauseOnMouseEnter: true,
   },
 });
 
@@ -80,6 +85,7 @@ var swiper6 = new Swiper(".blog-swiper", {
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
+     pauseOnMouseEnter: true,
   },
 });
 
@@ -184,6 +190,46 @@ AOS.init({
   duration: 1000,
   once: true,
 });
+
+//  const openText = document.getElementById("openText");
+//   const todayStatus = document.getElementById("todayStatus");
+
+//   const now = new Date();
+//   const hour = now.getHours();
+//   const day = now.getDay(); // 0 = Sunday
+
+//   let isOpen = false;
+
+//   if (day >= 1 && day <= 5) {
+//     isOpen = hour >= 9 && hour < 22;
+//   } else if (day === 6) {
+//     isOpen = hour >= 9 && hour < 20;
+//   }
+
+//   if (isOpen) {
+//     openText.textContent = "Open Now • Closes at 10 PM";
+//     todayStatus.innerHTML = "🟢 We are open right now";
+//   } else {
+//     openText.textContent = "Closed • Opens at 9 AM";
+//     todayStatus.innerHTML = "🔴 We are currently closed";
+//   }
+
+ let lastScrollTop = 0;
+  const navbar = document.querySelector(".header-sec");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // scrolling down
+      navbar.classList.add("nav-hide");
+    } else {
+      // scrolling up
+      navbar.classList.remove("nav-hide");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
 
 luxy.init({
   wrapper: "#luxy",
