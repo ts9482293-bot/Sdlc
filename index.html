@@ -43,6 +43,27 @@
     <link rel="stylesheet" href="./asset/styel.css" />
   </head>
   <body>
+ <!-- Splash Screen -->
+<div id="splash-screen">
+  <div class="gold-smoke"></div>
+
+  <div class="splash-content">
+    <img src="images/Group 1000004669.png" alt="LocalPro">
+
+    <h1>LocalPro</h1>
+    <p>Trusted Home Services</p>
+
+    <!-- Golden Underline Loader -->
+    <div class="gold-loader">
+      <span></span>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- HEADER / HERO / PAGE CONTENT -->
+
     <!-- nav-sec -->
     <header class="header-sec" class="luxy-el" data-speed="0.08">
       <div class="container">
@@ -217,66 +238,71 @@
             </h1>
           </div>
           <div class="modal-body">
-          <form class="modal-form" id="modalform" novalidate>
-  <div class="row modal-row align-items-center">
+            <form class="modal-form" id="modalform" novalidate>
+              <div class="row modal-row align-items-center">
+                <!-- Email -->
+                <div class="col-12">
+                  <div class="input-cont">
+                    <p id="emailError" class="error"></p>
+                    <label class="modal-lable" for="modal-email">Email</label
+                    ><br />
+                    <input
+                      type="email"
+                      id="modal-email"
+                      name="email"
+                      placeholder="Enter Your Email"
+                    />
+                  </div>
+                </div>
 
-    <!-- Email -->
-    <div class="col-12">
-      <div class="input-cont">
-        <p id="emailError" class="error"></p>
-        <label class="modal-lable" for="modal-email">Email</label><br />
-        <input
-          type="email"
-          id="modal-email"
-          name="email"
-          placeholder="Enter Your Email"
-        />
-      </div>
-    </div>
+                <!-- Password -->
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="passwordError" class="error"></p>
+                    <label class="modal-lable" for="modal-password"
+                      >Password</label
+                    ><br />
+                    <input
+                      type="password"
+                      id="modal-password"
+                      name="password"
+                      placeholder="Enter Your Password"
+                    />
+                  </div>
+                </div>
 
-    <!-- Password -->
-    <div class="col-12 modal-col">
-      <div class="input-cont">
-        <p id="passwordError" class="error"></p>
-        <label class="modal-lable" for="modal-password">Password</label><br />
-        <input
-          type="password"
-          id="modal-password"
-          name="password"
-          placeholder="Enter Your Password"
-        />
-      </div>
-    </div>
+                <!-- Confirm Password -->
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="confirmPasswordError" class="error"></p>
+                    <label class="modal-lable" for="confirm-password"
+                      >Confirm Password</label
+                    ><br />
+                    <input
+                      type="password"
+                      id="confirm-password"
+                      name="confirm_password"
+                      placeholder="Confirm Your Password"
+                    />
+                  </div>
+                </div>
 
-    <!-- Confirm Password -->
-    <div class="col-12 modal-col">
-      <div class="input-cont">
-        <p id="confirmPasswordError" class="error"></p>
-        <label class="modal-lable" for="confirm-password">Confirm Password</label><br />
-        <input
-          type="password"
-          id="confirm-password"
-          name="confirm_password"
-          placeholder="Confirm Your Password"
-        />
-      </div>
-    </div>
+                <!-- Address -->
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="addressError" class="error"></p>
+                    <label class="modal-lable" for="address">Address</label
+                    ><br />
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="Enter your address"
+                    />
+                  </div>
+                </div>
 
-    <!-- Address -->
-    <div class="col-12 modal-col">
-      <div class="input-cont">
-        <p id="addressError" class="error"></p>
-        <label class="modal-lable" for="address">Address</label><br />
-        <input
-          type="text"
-          id="address"
-          name="address"
-          placeholder="Enter your address"
-        />
-      </div>
-    </div>
-
-    <div class="col-6">
+                <div class="col-6">
                   <a href="" class="apple-btn">
                     <figure class="apple-img">
                       <img src="./imges2/Vector (3).png" alt="" />
@@ -293,49 +319,49 @@
                   </a>
                 </div>
 
-    <!-- Submit -->
-    <div class="col-12 modal-col">
-      <div class="btn-cont">
-        <button type="submit" class="modal-btn">Create account</button>
-      </div>
-    </div>
-
-  </div>
-</form>
-
-          </div>
-        </div>
-        <div class="modal-content right-modal">
-         <div class="modal-right-cont">
-          <div class="right-btn-close">
-             <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-           <div class="modal-header modal-right-header">
-            <div class="modal-cont">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Hey There !
-              </h1>
-              <p>
-                Sign in to start planning your journeys, save favorites, and
-                travel with ease.
-              </p>
-            </div>
-            <form action="" class="modal-form" id="modalform">
-              <div class="row modal-row align-items-center">
-                <div class="input-cont btn-cont">
-                  <button type="submit" class="modal-btn">
-                    Create account
-                  </button>
+                <!-- Submit -->
+                <div class="col-12 modal-col">
+                  <div class="btn-cont">
+                    <button type="submit" class="modal-btn">
+                      Create account
+                    </button>
+                  </div>
                 </div>
               </div>
             </form>
           </div>
-         </div>
+        </div>
+        <div class="modal-content right-modal">
+          <div class="modal-right-cont">
+            <div class="right-btn-close">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-header modal-right-header">
+              <div class="modal-cont">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Hey There !
+                </h1>
+                <p>
+                  Sign in to start planning your journeys, save favorites, and
+                  travel with ease.
+                </p>
+              </div>
+              <form action="" class="modal-form" id="modalform">
+                <div class="row modal-row align-items-center">
+                  <div class="input-cont btn-cont">
+                    <button type="submit" class="modal-btn">
+                      Create account
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -371,7 +397,7 @@
                   </a>
                   <!-- <a href="" class="book-btn">Call Us Today</a> -->
                   <a
-                    href="https://youtu.be/IJCEpbIHTa8?si=ZhmIwgUwCDNz4vCC"
+                    href="https://youtu.be/pksXMapdZZU?si=pD-CSbFh-5YOJ4Bd"
                     data-fancybox
                     class="play-btn video-play-btn"
                   >

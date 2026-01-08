@@ -168,6 +168,18 @@ cards.forEach((card) => {
   });
 });
 
+// splash-screen
+window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("splash-screen").style.opacity = "0";
+      document.getElementById("splash-screen").style.transition = "0.8s";
+      setTimeout(() => {
+        document.getElementById("splash-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      }, 800);
+    }, 3000);
+  });
+
 Fancybox.bind("[data-fancybox]", {
   Toolbar: true,
   closeButton: "top",

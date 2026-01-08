@@ -780,6 +780,7 @@ nav,
   /* margin: 0 10px; */
   transition: all ease 0.4s;
   margin: 0 auto;
+  cursor: pointer;
 }
 .img-card::before {
   content: "";

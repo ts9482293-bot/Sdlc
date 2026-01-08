@@ -17,25 +17,43 @@ navLinks.forEach((link) => {
 
 // counter
 const counters = document.querySelectorAll(".counter");
-const speed = 200; // lower = faster
 
-counters.forEach((counter) => {
-  const updateCount = () => {
-    const target = +counter.getAttribute("data-target");
-    const count = +counter.innerText;
+const animateCounter = (counter) => {
+  const target = +counter.dataset.target;
+  const duration = 1500; // ms
+  let start = 0;
+  let startTime = null;
 
-    const increment = target / speed;
+  const update = (timestamp) => {
+    if (!startTime) startTime = timestamp;
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    const value = Math.floor(progress * target);
 
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 15);
+    counter.innerText = value;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
     } else {
       counter.innerText = target + "+";
     }
   };
 
-  updateCount();
-});
+  requestAnimationFrame(update);
+};
+
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        obs.unobserve(entry.target); // run once
+      }
+    });
+  },
+  { threshold: 0.6 }
+);
+
+counters.forEach((counter) => observer.observe(counter));
 
 const form = document.getElementById("modalform");
 const emailInput = document.getElementById("modal-email");

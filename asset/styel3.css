@@ -598,6 +598,7 @@ nav,
   background: #ffffff;
   padding: 16px 22px;
   border-radius: 16px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -626,6 +627,7 @@ nav,
   bottom: 75%;
   left: 70%;
   position: absolute;
+  cursor: pointer;
 }
 .banner-badges-icon > img {
   width: 100%;
@@ -798,6 +800,7 @@ nav,
 .swiper-slide {
   max-width: 419px;
   height: 705px;
+  cursor: pointer;
 }
 
 .card-img {
@@ -1023,6 +1026,7 @@ nav,
   border-bottom: 3px solid #2563eb;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
 }
 
 .trend-card:hover {
