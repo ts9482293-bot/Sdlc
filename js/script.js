@@ -89,51 +89,50 @@ var swiper6 = new Swiper(".blog-swiper", {
   },
 });
 
-const form = document.getElementById("modalform");
-  const emailInput = document.getElementById("modal-email");
-  const passwordInput = document.getElementById("modal-password");
 
-  const emailError = document.getElementById("emailError");
-  const passwordError = document.getElementById("passwordError");
+document.getElementById("modalform").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // stop form submission
+  const email = document.getElementById("modal-email").value.trim();
+  const password = document.getElementById("modal-password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
+  const address = document.getElementById("address").value.trim();
 
-    let isValid = true;
+  // Clear errors
+  document.querySelectorAll(".error").forEach(el => el.textContent = "");
 
-    // Reset errors
-    emailError.textContent = "";
-    passwordError.textContent = "";
+  let isValid = true;
 
-    // Email validation
-    const emailValue = emailInput.value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email) {
+    document.getElementById("emailError").textContent = "Email is required";
+    isValid = false;
+  }
 
-    if (emailValue === "") {
-      emailError.textContent = "Email is required";
-      isValid = false;
-    } else if (!emailPattern.test(emailValue)) {
-      emailError.textContent = "Enter a valid email address";
-      isValid = false;
-    }
+  if (password.length < 6) {
+    document.getElementById("passwordError").textContent =
+      "Password must be at least 6 characters";
+    isValid = false;
+  }
 
-    // Password validation
-    const passwordValue = passwordInput.value.trim();
+  if (password !== confirmPassword) {
+    document.getElementById("confirmPasswordError").textContent =
+      "Passwords do not match";
+    isValid = false;
+  }
 
-    if (passwordValue === "") {
-      passwordError.textContent = "Password is required";
-      isValid = false;
-    } else if (passwordValue.length < 6) {
-      passwordError.textContent = "Password must be at least 6 characters";
-      isValid = false;
-    }
+  if (!address) {
+    document.getElementById("addressError").textContent =
+      "Address is required";
+    isValid = false;
+  }
 
-    // If everything is valid
-    if (isValid) {
-      console.log("Form submitted successfully!");
-      form.reset(); // optional
-    }
-  });
+  if (isValid) {
+    alert("Account created successfully ✅");
+    // this.submit(); // enable when backend is ready
+  }
+});
+
+
 
 const navLinks = document.querySelectorAll(".nav-link");
 
