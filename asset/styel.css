@@ -411,6 +411,7 @@ border-bottom-right-radius: 20px;
   height: 48px;
   border: none;
   outline: none;
+  margin-bottom: 24px;
   border-radius: 20px;
   padding-left: 20px;
    background: var(--email-background-color);
