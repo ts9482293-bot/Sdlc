@@ -1050,7 +1050,7 @@ border-bottom-right-radius: 20px;
 .home-btn::after,
 .home-btn::before {
   position: absolute;
-  width: 50%;
+  width: 51%;
   height: 100%;
   content: "";
   background: var(--hover-color);
@@ -1059,10 +1059,10 @@ border-bottom-right-radius: 20px;
   transition: 0.3s all ease;
 }
 .home-btn::after {
-  right: -50%;
+  right: -51%;
 }
 .home-btn::before {
-  left: -50%;
+  left: -51%;
 }
 .home-btn:hover::after {
   right: 0;
