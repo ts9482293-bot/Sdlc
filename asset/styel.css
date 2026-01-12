@@ -464,9 +464,10 @@ nav,
 .right-modal{
  background: linear-gradient(
   to right,
-  #1052FF 55%,
-  #1052FF 90%,
-  #5C82FF 100%
+  #2b57ff,
+  #4a74ff,
+  #6f93ff,
+  #8fb0ff
 );
 display: flex;
 align-items: center;
@@ -899,7 +900,7 @@ border-bottom-right-radius: 20px;
   transform-origin: center bottom;
 }
 /* 3D turning animation */
-@keyframes readyTurn {
+/* @keyframes readyTurn {
   0% {
     transform: rotateY(0deg) rotateX(0deg) translateY(0);
   }
@@ -915,7 +916,7 @@ border-bottom-right-radius: 20px;
   100% {
     transform: rotateY(0deg) rotateX(0deg) translateY(0);
   }
-}
+} */
 /* .banner-img:hover img {
   transform: scale(1.05);
 } */
@@ -1135,7 +1136,7 @@ border-bottom-right-radius: 20px;
 .swiper-button-prev {
   position: absolute;
   top: 90% !important;
-  left: 45% !important;
+  left: 44% !important;
   font-size: 35px;
   color: var(--primary-color);
   transition: 0.3s ease;
@@ -1151,7 +1152,7 @@ border-bottom-right-radius: 20px;
 .swiper-button-next {
   position: absolute;
   top: 90% !important;
-  right: 45% !important;
+  right: 47% !important;
   font-size: 35px;
   color: var(--primary-color);
 }
@@ -1308,7 +1309,7 @@ border-bottom-right-radius: 20px;
   width: 306px;
   height: 306px;
   border-radius: 50%;
-  background: var(--hover-color);
+  background: var(--back-ground-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1415,6 +1416,7 @@ border-bottom-right-radius: 20px;
   color: var(--primary-color);
   border-radius: 8px;
   outline: 1px solid var(--secondary-color);
+  background: var(--secondary-color);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -1685,17 +1687,17 @@ border-bottom-right-radius: 20px;
 .trust-slide {
   height: 120px !important;
   width: 120px !important;
-  background: var(--offcanvsbckground-color);
+ background: linear-gradient(90deg, #c5e3ff 0%, #d9e8ff 50%, #ffffff 100%);
 }
 .trust-big-slide{
   max-width: 213px !important;
   height: 120px !important;
-  background: var(--offcanvsbckground-color);
+ background: linear-gradient(90deg, #c5e3ff 0%, #d9e8ff 50%, #ffffff 100%);
 }
 .trust-large-slide{
   max-width: 149px !important;
   height: 120px !important;
-  background: var(--offcanvsbckground-color);
+  background: linear-gradient(90deg, #c5e3ff 0%, #d9e8ff 50%, #ffffff 100%);
 }
 .swiper-wrapper {
   border: none !important;
@@ -1873,12 +1875,25 @@ border-bottom-right-radius: 20px;
   max-width: 249.62px !important;
   height: 450px !important;
  }
+ .team-swiper .swiper-scrollbar,
+.team-swiper .swiper-scrollbar-drag {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
  .team-card{
   max-width: 249.62px;
   height: 450px;
   background: var(--secondary-color);
   border-radius: 11.9px;
+  overflow: hidden;
+  transition: all 0.5s ease;
  }
+ .team-card:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+}
  .team-card-img{
   max-width: 249.62px;
   height: 250px;
@@ -1890,7 +1905,24 @@ border-bottom-right-radius: 20px;
   height: 100%;
   object-fit: cover;
   border-radius: 11.9px;
+  transition: transform 0.5s ease;
  }
+/* .team-card-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+} */
+.team-card-img:hover img {
+  transform: scale(1.08);
+}
+
+.team-card-img:hover::after {
+  opacity: 1;
+}
  .team-icon-circle{
   width: 77.45px;
   height: 77.45px;
@@ -1902,12 +1934,16 @@ border-bottom-right-radius: 20px;
   position: absolute;
   top: 86%;
   left: 35%;
-  z-index: 1;
   border: 1px solid var(--primary-color);
  }
  .team-icon-circle>figure{
-  margin: 0;
+  margin: 0 ;
   width: 33.96px;
+ }
+ .team-icon-circle>figure>img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
  }
  .team-card-body{
   margin-top: 45.87px;
@@ -1955,18 +1991,18 @@ border-bottom-right-radius: 20px;
 }
 .blog-swiper {
   max-width: 100% !important;
-  height: 665px !important;
+  height: 552px !important;
 }
 .blog-slide {
   max-width: 512px !important;
-  height: 665px !important;
+  height: 552px !important;
 }
 .blog-card {
   overflow: hidden;
   transition: all 0.35s ease;
   cursor: pointer;
   max-width: 512px;
-  height: 665px ;
+  height: 552px ;
 }
 .blog-card:hover {
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);

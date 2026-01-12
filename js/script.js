@@ -46,7 +46,7 @@ var swiper3 = new Swiper(".equipment-swiper", {
   speed: 800,
 
   breakpoints: {
-    576: {
+    320: {
       slidesPerView: "auto",
     },
     800: {
@@ -58,10 +58,10 @@ var swiper3 = new Swiper(".equipment-swiper", {
   },
 });
 
-var swiper3 = new Swiper(".swiper", {
+var swiper7 = new Swiper(".team-swiper", {
   // Optional parameters
   loop: true,
-  spaceBetween: 30,
+  spaceBetween: 17.28,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -71,14 +71,14 @@ var swiper3 = new Swiper(".swiper", {
   speed: 800,
 
   breakpoints: {
-    576: {
+    320: {
       slidesPerView: "auto",
     },
     800: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 6,
     },
   },
 });
