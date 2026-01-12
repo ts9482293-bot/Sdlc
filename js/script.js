@@ -37,11 +37,11 @@ var swiper3 = new Swiper(".equipment-swiper", {
   // Optional parameters
   loop: true,
   spaceBetween: 30,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-     pauseOnMouseEnter: true,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  //    pauseOnMouseEnter: true,
+  // },
 
   speed: 800,
 

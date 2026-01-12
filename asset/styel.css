@@ -1538,6 +1538,9 @@ border-bottom-right-radius: 20px;
   margin: 0 auto;
   background: var(--hover-color);
 }
+.equipment-img>img{
+  object-fit: cover !important;
+}
 .equipment-card-img {
   max-width: 299px;
   overflow: hidden;
