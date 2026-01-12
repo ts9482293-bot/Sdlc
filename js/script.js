@@ -11,31 +11,75 @@ var swiper = new Swiper(".myswiper", {
   },
 });
 const swiper2 = new Swiper(".trustslider", {
+  speed: 10000,
+  direction: "horizontal",
+  spaceBetween: 50,
   loop: true,
-  freeMode: true,
-  freeModeMomentum: false, // IMPORTANT: stops momentum "jump"
   slidesPerView: "auto",
-  spaceBetween: 43,
 
-  speed: 6000, // slow, smooth flow
-  autoplay: {
-    delay: 0, // no pause
-    disableOnInteraction: false,
-     pauseOnMouseEnter: true,
+  freeMode: {
+    enabled: true,
+    momentum: false,
   },
 
-  allowTouchMove: false, // no user dragging (optional)
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // ✅ pause on hover
+  },
+
+  allowTouchMove: false,
+  pagination: false,
+  navigation: false,
 });
 
 var swiper3 = new Swiper(".equipment-swiper", {
   // Optional parameters
   loop: true,
   spaceBetween: 30,
-  slidesPerView: "auto",
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
      pauseOnMouseEnter: true,
+  },
+
+  speed: 800,
+
+  breakpoints: {
+    576: {
+      slidesPerView: "auto",
+    },
+    800: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+var swiper3 = new Swiper(".swiper", {
+  // Optional parameters
+  loop: true,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+     pauseOnMouseEnter: true,
+  },
+
+  speed: 800,
+
+  breakpoints: {
+    576: {
+      slidesPerView: "auto",
+    },
+    800: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
   },
 });
 var swiper4 = new Swiper(".services-swiper", {
@@ -76,19 +120,120 @@ var swiper5 = new Swiper(".card-swiper", {
 });
 
 var swiper6 = new Swiper(".blog-swiper", {
-  // Optional parameters
   loop: true,
-  slidesPerView: "auto",
-  spaceBetween: 33,
-  slidesPerView: "auto",
- 
+  spaceBetween: 30,
+
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-     pauseOnMouseEnter: true,
+    pauseOnMouseEnter: true,
+  },
+
+  speed: 800,
+
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+    },
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
   },
 });
 
+ document.addEventListener("DOMContentLoaded", function () {
+    const signupLeft = document.getElementById("signupLeft");
+    const signupRight = document.getElementById("signupRight");
+    const loginLeft = document.getElementById("loginLeft");
+    const loginRight = document.getElementById("loginRight");
+
+    /* -------------------------
+       INITIAL STATE: LOGIN FIRST
+    -------------------------- */
+    signupLeft.style.display = "none";
+    signupRight.style.display = "none";
+    loginLeft.style.display = "block";
+    loginRight.style.display = "block";
+
+    /* -------------------------
+       PREVENT ALL FORM REFRESH
+    -------------------------- */
+    document.querySelectorAll("form").forEach(form => {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
+    });
+
+    /* -------------------------
+       SIGN IN → LOGIN
+    -------------------------- */
+    window.showLogin = function () {
+      signupLeft.style.display = "none";
+      signupRight.style.display = "none";
+      loginLeft.style.display = "block";
+      loginRight.style.display = "block";
+    };
+
+    /* -------------------------
+       CREATE ACCOUNT → SIGNUP
+    -------------------------- */
+    window.toggleBox = function () {
+      loginLeft.style.display = "none";
+      loginRight.style.display = "none";
+      signupLeft.style.display = "block";
+      signupRight.style.display = "block";
+    };
+  });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".log-modal-btn")?.closest("form");
+
+    if (!form) return;
+
+    const emailInput = form.querySelector('input[name="email"]');
+    const passwordInput = form.querySelector('input[name="password"]');
+
+    const emailError = form.querySelector("#emailError");
+    const passwordError = form.querySelector("#passwordError");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // 🚫 stop refresh
+
+      let isValid = true;
+
+      // reset errors
+      emailError.textContent = "";
+      passwordError.textContent = "";
+
+      // email check
+      if (emailInput.value.trim() === "") {
+        emailError.textContent = "Email is required";
+        isValid = false;
+      } else if (!/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+        emailError.textContent = "Enter a valid email";
+        isValid = false;
+      }
+
+      // password check
+      if (passwordInput.value.trim() === "") {
+        passwordError.textContent = "Password is required";
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      // ✅ SUCCESS (NO REFRESH)
+      console.log("Login successful");
+      console.log("Email:", emailInput.value);
+      console.log("Password:", passwordInput.value);
+
+      // 👉 here you will call API later
+      // fetch('/login', {...})
+    });
+  });
 
 document.getElementById("modalform").addEventListener("submit", function (e) {
   e.preventDefault();

@@ -41,10 +41,17 @@ body {
   line-height: 1.6;
   background: #fff;
 }
+.slider-container{
+  max-width: 1950px;
+  margin: 0 -15px;
+  padding: 0 15px;
+  width: 100%;
+}
 .container {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+  width: 100%;
 }
 .modal-row{
   flex-direction: row;

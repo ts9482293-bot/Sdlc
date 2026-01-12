@@ -43,24 +43,22 @@
     <link rel="stylesheet" href="./asset/styel.css" />
   </head>
   <body>
- <!-- Splash Screen -->
-<div id="splash-screen">
-  <div class="gold-smoke"></div>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <div class="gold-smoke"></div>
 
-  <div class="splash-content">
-    <img src="images/Group 1000004669.png" alt="LocalPro">
+      <div class="splash-content">
+        <img src="images/Group 1000004669.png" alt="LocalPro" />
 
-    <h1>LocalPro</h1>
-    <p>Trusted Home Services</p>
+        <h1>LocalPro</h1>
+        <p>Trusted Home Services</p>
 
-    <!-- Golden Underline Loader -->
-    <div class="gold-loader">
-      <span></span>
+        <!-- Golden Underline Loader -->
+        <div class="gold-loader">
+          <span></span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
 
     <!-- HEADER / HERO / PAGE CONTENT -->
 
@@ -231,13 +229,184 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content left-modal">
+        <div id="signupLeft" class="modal-content left-modal">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">
               Create an account
             </h1>
           </div>
           <div class="modal-body">
+            <form class="modal-form" id="modalform" novalidate>
+              <div class="row modal-row align-items-center">
+                <div class="col-12">
+                  <div class="input-cont">
+                    <p id="emailError" class="error"></p>
+                    <label class="modal-lable" for="modal-email">Email</label
+                    ><br />
+                    <input
+                      type="email"
+                      id="modal-email"
+                      name="email"
+                      placeholder="Enter Your Email"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="passwordError" class="error"></p>
+                    <label class="modal-lable" for="modal-password"
+                      >Password</label
+                    ><br />
+                    <input
+                      type="password"
+                      id="modal-password"
+                      name="password"
+                      placeholder="Enter Your Password"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="confirmPasswordError" class="error"></p>
+                    <label class="modal-lable" for="confirm-password"
+                      >Confirm Password</label
+                    ><br />
+                    <input
+                      type="password"
+                      id="confirm-password"
+                      name="confirm_password"
+                      placeholder="Confirm Your Password"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="addressError" class="error"></p>
+                    <label class="modal-lable" for="address">Address</label
+                    ><br />
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="Enter your address"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <a href="" class="apple-btn">
+                    <figure class="apple-img">
+                      <img src="./imges2/Vector (3).png" alt="" />
+                    </figure>
+                    Apple
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="" class="google-btn">
+                    <figure class="apple-img">
+                      <img src="./imges2/Google - Original.png" alt="" />
+                    </figure>
+                    Google
+                  </a>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="btn-cont">
+                    <button type="submit" class="modal-btn">
+                      Create account
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="signupRight" class="modal-content right-modal">
+          <div class="modal-right-cont">
+            <div class="right-btn-close">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-header modal-right-header">
+              <div class="modal-cont">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Hey There !
+                </h1>
+                <p>
+                  Sign in to start planning your journeys, save favorites, and
+                  travel with ease.
+                </p>
+              </div>
+              <form action="" class="modal-form" id="modalform">
+                <div class="row modal-row align-items-center">
+                  <div class="input-cont btn-cont">
+                    <button
+                      type="button"
+                      onclick="showLogin()"
+                      class="modal-btn"
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="loginRight" class="modal-content right-modal log-right-modal">
+          <div class="modal-right-cont">
+            <!-- <div class="right-btn-close">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div> -->
+            <div class="modal-header modal-right-header log-modal-right-header">
+              <div class="modal-cont">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Welcome Back
+                </h1>
+                <p>
+                  Sign up to start planning your journeys, save favorites, and
+                  travel with ease.
+                </p>
+              </div>
+              <form action="" class="modal-form" id="modalform">
+                <div class="row modal-row align-items-center">
+                  <div class="input-cont btn-cont">
+                    <button type="button" onclick="toggleBox()" class="log-btn">
+                      Create account
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="loginLeft" class="modal-content left-modal log-left-cont">
+          <div class="right-btn-close">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-header log-modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Login to your account
+            </h1>
+          </div>
+          <div class="modal-body log-modal-body">
             <form class="modal-form" id="modalform" novalidate>
               <div class="row modal-row align-items-center">
                 <!-- Email -->
@@ -271,37 +440,6 @@
                   </div>
                 </div>
 
-                <!-- Confirm Password -->
-                <div class="col-12 modal-col">
-                  <div class="input-cont">
-                    <p id="confirmPasswordError" class="error"></p>
-                    <label class="modal-lable" for="confirm-password"
-                      >Confirm Password</label
-                    ><br />
-                    <input
-                      type="password"
-                      id="confirm-password"
-                      name="confirm_password"
-                      placeholder="Confirm Your Password"
-                    />
-                  </div>
-                </div>
-
-                <!-- Address -->
-                <div class="col-12 modal-col">
-                  <div class="input-cont">
-                    <p id="addressError" class="error"></p>
-                    <label class="modal-lable" for="address">Address</label
-                    ><br />
-                    <input
-                      type="text"
-                      id="address"
-                      name="address"
-                      placeholder="Enter your address"
-                    />
-                  </div>
-                </div>
-
                 <div class="col-6">
                   <a href="" class="apple-btn">
                     <figure class="apple-img">
@@ -322,45 +460,13 @@
                 <!-- Submit -->
                 <div class="col-12 modal-col">
                   <div class="btn-cont">
-                    <button type="submit" class="modal-btn">
-                      Create account
+                    <button type="submit" class="log-modal-btn">
+                      Login Now
                     </button>
                   </div>
                 </div>
               </div>
             </form>
-          </div>
-        </div>
-        <div class="modal-content right-modal">
-          <div class="modal-right-cont">
-            <div class="right-btn-close">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-header modal-right-header">
-              <div class="modal-cont">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                  Hey There !
-                </h1>
-                <p>
-                  Sign in to start planning your journeys, save favorites, and
-                  travel with ease.
-                </p>
-              </div>
-              <form action="" class="modal-form" id="modalform">
-                <div class="row modal-row align-items-center">
-                  <div class="input-cont btn-cont">
-                    <button type="submit" class="modal-btn">
-                      Create account
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
           </div>
         </div>
       </div>
@@ -424,7 +530,7 @@
       </section>
       <!-- services-slider-sec -->
       <section class="services-slider-sec">
-        <div class="container">
+        <div class="slider-container">
           <div class="swiper services-swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -470,7 +576,7 @@
             <div class="col-xxl-3 col-xl-4 col-lg-4 col-12">
               <div class="services-btn" data-aos="fade-left">
                 <a href="" class="home-btn active">Home</a>
-                <a href="" class="home-btn busniess-btn">busniess</a>
+                <a href="" class="home-btn busniess-btn">business</a>
               </div>
             </div>
           </div>
@@ -480,7 +586,7 @@
               <!-- Slides -->
               <div class="swiper-slide card-slide">
                 <div class="card services-card" data-aos="fade-up">
-                  <div class="card-body">
+                  <div class="services-card-body">
                     <div class="services-card-img">
                       <img
                         src="./images/Group 95.png"
@@ -502,7 +608,7 @@
               </div>
               <div class="swiper-slide card-slide">
                 <div class="card services-card" data-aos="fade-up">
-                  <div class="card-body">
+                  <div class="services-card-body">
                     <div class="services-sub-img">
                       <img
                         src="./images/cardicon.png"
@@ -524,7 +630,7 @@
               </div>
               <div class="swiper-slide card-slide">
                 <div class="card services-card" data-aos="fade-up">
-                  <div class="card-body">
+                  <div class="services-card-body">
                     <div class="services-card-img">
                       <img
                         src="./images/Group 94.png"
@@ -545,30 +651,8 @@
                 </div>
               </div>
               <div class="swiper-slide card-slide">
-                <div class="card services-card" data-aos="fade-up">
-                  <div class="card-body">
-                    <div class="services-card-img">
-                      <img
-                        src="./images/cardclean.png"
-                        class="card-img-top"
-                        alt="..."
-                      />
-                    </div>
-                    <h5 class="services-card-title">Painter Service</h5>
-                    <p class="services-card-text">
-                      From small repairs to large-scale installations our
-                      experienced electricians provide tailored solutions to
-                      power your home.
-                    </p>
-                    <div class="services-card-btn">
-                      <a href="#" class="primary-btn learn-btn">Learn More</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide card-slide">
                 <div class="card services-card">
-                  <div class="card-body">
+                  <div class="services-card-body">
                     <div class="services-card-img">
                       <img
                         src="./images/Group 95.png"
@@ -581,6 +665,28 @@
                       We have a wide spectrum of expertise in web solutions
                       within these industries, giving us the necessary skills
                       and knowledge to help you increase
+                    </p>
+                    <div class="services-card-btn">
+                      <a href="#" class="primary-btn learn-btn">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slide">
+                <div class="card services-card" data-aos="fade-up">
+                  <div class="services-card-body">
+                    <div class="services-card-img">
+                      <img
+                        src="./images/cardclean.png"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <h5 class="services-card-title">Painter Service</h5>
+                    <p class="services-card-text">
+                      From small repairs to large-scale installations our
+                      experienced electricians provide tailored solutions to
+                      power your home.
                     </p>
                     <div class="services-card-btn">
                       <a href="#" class="primary-btn learn-btn">Learn More</a>
@@ -780,6 +886,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="slider-container">
           <div class="swiper equipment-swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -1087,64 +1195,70 @@
       </section>
       <!-- trust-sec -->
       <section class="trust-sec">
-        <div class="container trust-container">
+        <div class="slider-container">
           <div class="swiper trustslider">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 9 (1).png  " alt="" />
+                  <img
+                    src="./images/flat-design-handyman-logo_23-2149239540 1.png "
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 2 (3).png  " alt="" />
+                  <img src="./images/download (9) 1.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 3 (2).png  " alt="" />
+                  <img src="./images/download (12) 1.png " alt="" />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 4 (2).png  " alt="" />
+                  <img src="./images/download (13) 1.png " alt="" />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 5 (2).png  " alt="" />
+                  <img src="./images/images (8) 1.png  " alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide trust-big-slide">
+                <div class="trus-slider-img-big">
+                  <img src="./images/images (4) 1.png " alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide trust-large-slide">
+                <div class="trus-slider-img-large">
+                  <img src="./images/images (5) 1.png " alt="" />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 2 (3).png " alt="" />
+                  <img
+                    src="./images/flat-design-handyman-logo_23-2149239540 2.png  "
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 3 (2).png  " alt="" />
+                  <img src="./images/download (9) 2.png   " alt="" />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 4 (2).png  " alt="" />
+                  <img src="../images/download (12) 2.png " alt="" />
                 </div>
               </div>
               <div class="swiper-slide trust-slide">
                 <div class="trus-slider-img">
-                  <img src="./images/image 5 (2).png  " alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide trust-slide">
-                <div class="trus-slider-img">
-                  <img src="./images/image 2 (3).png  " alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide trust-slide">
-                <div class="trus-slider-img">
-                  <img src="./images/image 3 (2).png  " alt="" />
+                  <img src="./images/download (13) 1.png " alt="" />
                 </div>
               </div>
             </div>
@@ -1178,7 +1292,7 @@
               </div>
             </div>
           </div>
-          <div class="row align-items-center">
+          <!-- <div class="row align-items-center">
             <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-12">
               <div
                 class="review-wraper"
@@ -1335,6 +1449,176 @@
                 </div>
               </div>
             </div>
+          </div> -->
+        </div>
+        <div class="slider-container">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper team-swiper">
+              <!-- Slides -->
+              <div class="swiper-slide team-slide">
+                <div class="card team-card">
+                  <div class="team-card-img">
+                    <img src="./images/team-img.png" alt="" />
+                    <div class="team-icon-circle">
+                      <figure class="team-icon">
+                        <img src="./images/pump-img.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="team-card-body">
+                      <h5 class="card-title">Plumber</h5>
+                      <p>
+                        Professional plumbing services for repairs,
+                        installations, and maintenance
+                      </p>
+                      <div class="team-card-btn">
+                        <a href="" class="view-btn">View Services</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide team-slide">
+                <div class="card team-card">
+                  <div class="team-card-img">
+                    <img src="./images/team-img2.png" alt="" />
+                    <div class="team-icon-circle">
+                      <figure class="team-icon">
+                        <img src="./images/team-icon2.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="team-card-body">
+                      <h5 class="card-title">Cleaner</h5>
+                      <p>
+                        Reliable cleaning services for homes, offices, and
+                        commercial spaces
+                      </p>
+                      <div class="team-card-btn">
+                        <a href="" class="view-btn">View Services</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide team-slide">
+                <div class="card team-card">
+                  <div class="team-card-img">
+                    <img src="./images/team-img3.png" alt="" />
+                    <div class="team-icon-circle">
+                      <figure class="team-icon">
+                        <img src="./images/team-icon3.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="team-card-body">
+                      <h5 class="card-title">Electrician</h5>
+                      <p>
+                        Licensed electricians for wiring, repairs, and
+                        electrical installations
+                      </p>
+                      <div class="team-card-btn">
+                        <a href="" class="view-btn">View Services</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide team-slide">
+                <div class="card team-card">
+                  <div class="team-card-img">
+                    <img src="./images/team-img4.png" alt="" />
+                    <div class="team-icon-circle">
+                      <figure class="team-icon">
+                        <img src="./images/team-icon-img4 (2).png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="team-card-body">
+                      <h5 class="card-title">Painter</h5>
+                      <p>
+                        Expert painters for interior and exterior painting
+                        projects
+                      </p>
+                      <div class="team-card-btn">
+                        <a href="" class="view-btn">View Services</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide team-slide">
+                <div class="card team-card">
+                  <div class="team-card-img">
+                    <img src="./images/team-img5.png" alt="" />
+                    <div class="team-icon-circle">
+                      <figure class="team-icon">
+                        <img src="./images/team-icon-img5.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="team-card-body">
+                      <h5 class="card-title">Mechanic</h5>
+                      <p>
+                        Specialized mechanical services for mission-critical
+                        equipment and repairs
+                      </p>
+                      <div class="team-card-btn">
+                        <a href="" class="view-btn">View Services</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide team-slide">
+                <div class="card team-card">
+                  <div class="team-card-img">
+                    <img src="./images/team-img6.png" alt="" />
+                    <div class="team-icon-circle">
+                      <figure class="team-icon">
+                        <img src="./images/team-icon-img5.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="team-card-body">
+                      <h5 class="card-title">Gardener</h5>
+                      <p>
+                        Lawn care, landscaping, and garden maintenance services
+                      </p>
+                      <div class="team-card-btn">
+                        <a href="" class="view-btn">View Services</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide team-slide">
+                <div class="card team-card">
+                  <div class="team-card-img">
+                    <img src="./images/team-img7.png" alt="" />
+                    <div class="team-icon-circle">
+                      <figure class="team-icon">
+                        <img src="./images/team-icon-img7.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="team-card-body">
+                      <h5 class="card-title">AC Technician</h5>
+                      <p>
+                        Expert air conditioning system installation, repair, and
+                        maintenance
+                      </p>
+                      <div class="team-card-btn">
+                        <a href="" class="view-btn">View Services</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
           </div>
         </div>
       </section>
@@ -1426,6 +1710,33 @@
                         <img src="./images/Ellipse 15 (2).png" alt="" />
                       </figure>
                       <p>By Priya</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide blog-slide">
+                <div
+                  class="card blog-card"
+                  data-aos="fade-up"
+                  data-aos-delay="150"
+                >
+                  <div class="blog-card-img">
+                    <img src="./images/Rectangle 29 (1).png" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <div class="blog-card-box">
+                      <h5 class="blog-card-title">
+                        Finding a trustworthy plumber, electrician, or
+                      </h5>
+                      <div class="bookmark" id="bookmark">
+                        <img src="./images/bookmark-black.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="blog-img-box">
+                      <figure class="blog-img">
+                        <img src="./images/Ellipse 15 (1).png" alt="" />
+                      </figure>
+                      <p>By William</p>
                     </div>
                   </div>
                 </div>
