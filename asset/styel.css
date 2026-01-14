@@ -22,6 +22,10 @@ html {
   overflow-x: hidden;
   width: 100%;
 }
+a{
+  display: inline-block;
+  text-decoration: none;
+}
 .footer-row {
   border-top: 1px solid var(--social-color);
   margin-top: 70px;

@@ -19,7 +19,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 a {
   display: inline-block;
@@ -1430,6 +1430,26 @@ border-bottom-right-radius: 20px;
   .nav-logo{
     margin: 0;
   }
+   #modal-email,
+   #modal-password,
+   #confirm-password,
+   #address{
+    width: 406px;
+   }
+   .input-cont{
+    max-width: 406px;
+    margin: 0 auto;
+   }
+   .btn-cont{
+    margin-top: 32px;
+   }
+   .apple-btn,
+   .google-btn{
+    width: 170px;
+   }
+  .card-text {
+    margin: 10px 0 20px;
+  }
   .offcanvas>ul{
     margin: 0 0 0 10px;
   }
@@ -1517,6 +1537,33 @@ border-bottom-right-radius: 20px;
   .primary-btn {
     margin: 10px 0;
   }
+   .modal-dialog{
+    flex-direction: column-reverse;
+  }
+  .modal-content{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .right-modal{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .left-modal{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+  }
+  .log-left-cont{
+   border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+}
+.log-right-modal{
+  border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px !important;
+    border-top-left-radius: 0;
+}
   .approach-card {
     margin: 0 auto;
   }
@@ -1844,37 +1891,57 @@ border-bottom-right-radius: 20px;
     left: 61.5%;
     /* box-shadow: 0 -15px 0 black; */
   }
-  .modal-content{
+  .modal-content {
     max-width: 400px;
-    height: 400px;
+    height: 580px;
     margin: 0 auto;
   }
-  #modal-email{
-    max-width: 260px;
+  #modal-email {
+    max-width: 250px;
     margin-bottom: 10px;
   }
-  #modal-password{
-    max-width: 260px;
+  #modal-password {
+    max-width: 250px;
     margin-bottom: 10px;
   }
-  .modal-btn{
-    padding: 16px 80px;
+   #confirm-password {
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+   #address {
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+  .modal-btn {
+    padding: 16px 26px;
     margin-bottom: 10px;
     font-size: 12px;
   }
-  .input-cont{
+  .input-cont {
     max-width: 260px;
   }
-  .apple-btn{
-    width: 120px;
+  .input-cont-para > p {
+    font-size: 14px;
+    margin: 0 auto;
   }
-  .google-btn{
-    width: 120px;
+  .log-btn {
+    font-size: 14px;
   }
-  .btn-cont{
+  .apple-btn {
+    width: 120px;
+    height: 45px;
+  }
+  .google-btn {
+    width: 120px;
+    height: 45px;
+  }
+  .apple-img {
+    margin: 0 10px 0 0;
+  }
+  /* .btn-cont {
     max-width: 255px !important;
-  }
-  .input-cont-para{
+  } */
+  .input-cont-para {
     margin-top: 10px;
   }
 }

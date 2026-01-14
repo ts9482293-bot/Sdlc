@@ -38,7 +38,7 @@
   </head>
   <body>
     <!-- nav-sec -->
-    <header class="header-sec" >
+<header class="header-sec" class="luxy-el" data-speed="0.08">
       <div class="container">
         <nav class="nav-top">
           <ul class="nav-top-list">
@@ -51,8 +51,15 @@
                 class="map-btn nav-top-link"
               >
                 <i class="bi bi-geo-alt"></i>
-                <span>657 twin lakes Drive, Reno,NV 89523</span>
+                <span
+                  >2nd Floor, Sector V, Salt Lake, Kolkata – 700091, West
+                  Bengal, India</span
+                >
               </a>
+              <!-- <a href="" class="nav-top-link">
+                <i class="bi bi-geo-alt"></i>
+                <span>657 twin lakes Drive, Reno,NV 89523</span>
+              </a> -->
             </li>
             <li>
               <a
@@ -61,11 +68,11 @@
                 class="nav-top-link"
               >
                 <i class="fa-regular fa-envelope"></i>
-                <span>support@localpro.com</span>
+                <span>localpro@gmail.com</span>
               </a>
             </li>
-            <li>
-            <a
+            <li class="nav-border">
+              <a
                 data-fancybox
                 data-src="#dailyOpenTime"
                 href="javascript:;"
@@ -77,21 +84,27 @@
             </li>
           </ul>
           <ul class="social-list">
-           <li>
+            <li>
               <a href="" class="follow-link">Follow Us:</a>
             </li>
             <li>
-              <a href="https://www.facebook.com/LocalProServices" class="social-link"
+              <a
+                href="https://www.facebook.com/LocalProServices"
+                class="social-link"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/company/localpro-services" class="social-link"
+              <a
+                href="https://www.linkedin.com/company/localpro-services"
+                class="social-link"
                 ><i class="fa-brands fa-linkedin-in"></i
               ></a>
             </li>
             <li>
-              <a href="https://www.youtube.com/@LocalProServices" class="social-link"
+              <a
+                href="https://www.youtube.com/@LocalProServices"
+                class="social-link"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </li>
@@ -106,8 +119,8 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <div class="nav-logo">
-            <a class="navbar-brand" href="#">
-              <img src="./asstest/Group 1000004669.png" alt="" />
+            <a class="navbar-brand" href="index.html">
+              <img src="./images/Group 1000004669.png" alt="" />
             </a>
           </div>
           <button
@@ -135,9 +148,6 @@
                   >Home</a
                 >
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="index2.html">About Us</a>
-              </li>
 
               <li class="nav-item dropdown">
                 <a
@@ -147,11 +157,11 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  services
+                  Services
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="index3.html">services</a>
+                    <a class="dropdown-item" href="index3.html">Services</a>
                   </li>
                   <li><a class="dropdown-item" href="#">Plumber</a></li>
                   <li><a class="dropdown-item" href="#">Electrician</a></li>
@@ -161,6 +171,9 @@
                   </li>
                 </ul>
               </li>
+                  <li class="nav-item active">
+                <a class="nav-link" href="index2.html">About Us</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
               </li>
@@ -168,6 +181,39 @@
                 <a class="nav-link" href="index5.html">Contact</a>
               </li>
             </ul>
+            <div class="nav-location">
+              <!-- clickable map area -->
+              <div class="location-click">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="location-text">Salt Lake, Kolkata</span>
+              </div>
+
+              <!-- dropdown -->
+              <select class="location-select" id="locationSelect">
+                 <option class="none" value="Salt Lake, Kolkata" >
+                 
+                </option>
+                <option value="Salt Lake, Kolkata" >
+                  Salt Lake, Kolkata
+                </option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Bengaluru</option>
+              </select>
+
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+            </div>
+            <form action="" class="nav-form">
+              <input
+                type="search"
+                name=""
+                placeholder="Search For Service"
+                id="search"
+              />
+              <div class="serach-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </form>
             <div class="nav-btn">
               <!-- <a href="" class="primary-btn">Sing In</a> -->
               <!-- Button trigger modal -->
@@ -176,7 +222,7 @@
                 class="primary-btn"
                 data-bs-target="#staticBackdrop"
               >
-                Sing In
+                Sign In
               </a>
             </div>
           </div>
@@ -194,11 +240,171 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div id="signupLeft" class="modal-content left-modal">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">
               Create an account
             </h1>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form" id="modalform" novalidate>
+              <div class="row modal-row align-items-center">
+                <div class="col-12">
+                  <div class="input-cont">
+                    <p id="emailError" class="error"></p>
+                    <label class="modal-lable" for="modal-email">Email</label
+                    ><br />
+                    <input
+                      type="email"
+                      id="modal-email"
+                      name="email"
+                      placeholder="Enter Your Email"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="passwordError" class="error"></p>
+                    <label class="modal-lable" for="modal-password"
+                      >Password</label
+                    ><br />
+                    <input
+                      type="password"
+                      id="modal-password"
+                      name="password"
+                      placeholder="Enter Your Password"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="confirmPasswordError" class="error"></p>
+                    <label class="modal-lable" for="confirm-password"
+                      >Confirm Password</label
+                    ><br />
+                    <input
+                      type="password"
+                      id="confirm-password"
+                      name="confirm_password"
+                      placeholder="Confirm Your Password"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="input-cont">
+                    <p id="addressError" class="error"></p>
+                    <label class="modal-lable" for="address">Address</label
+                    ><br />
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="Enter your address"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <a href="" class="apple-btn">
+                    <figure class="apple-img">
+                      <img src="./imges2/Vector (3).png" alt="" />
+                    </figure>
+                    Apple
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="" class="google-btn">
+                    <figure class="apple-img">
+                      <img src="./imges2/Google - Original.png" alt="" />
+                    </figure>
+                    Google
+                  </a>
+                </div>
+
+                <div class="col-12 modal-col">
+                  <div class="btn-cont">
+                    <button type="submit" class="modal-btn">
+                      Create account
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="signupRight" class="modal-content right-modal">
+          <div class="modal-right-cont">
+            <div class="right-btn-close">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-header modal-right-header">
+              <div class="modal-cont">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Hey There !
+                </h1>
+                <p>
+                  Sign in to start planning your journeys, save favorites, and
+                  travel with ease.
+                </p>
+              </div>
+              <form action="" class="modal-form" id="modalform">
+                <div class="row modal-row align-items-center">
+                  <div class="input-cont btn-cont">
+                    <button
+                      type="button"
+                      onclick="showLogin()"
+                      class="modal-btn"
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="loginRight" class="modal-content right-modal log-right-modal">
+          <div class="modal-right-cont">
+            <!-- <div class="right-btn-close">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div> -->
+            <div class="modal-header modal-right-header log-modal-right-header">
+              <div class="modal-cont">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Welcome Back
+                </h1>
+                <p>
+                  Sign up to start planning your journeys, save favorites, and
+                  travel with ease.
+                </p>
+              </div>
+              <form action="" class="modal-form" id="modalform">
+                <div class="row modal-row align-items-center">
+                  <div class="input-cont btn-cont">
+                    <button type="button" onclick="toggleBox()" class="log-btn">
+                      Create account
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="loginLeft" class="modal-content left-modal log-left-cont">
+          <div class="right-btn-close">
             <button
               type="button"
               class="btn-close"
@@ -206,64 +412,68 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <form action="" class="modal-form" id="modalform">
+          <div class="modal-header log-modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Login to your account
+            </h1>
+          </div>
+          <div class="modal-body log-modal-body">
+            <form class="modal-form" id="modalform" novalidate>
               <div class="row modal-row align-items-center">
+                <!-- Email -->
                 <div class="col-12">
                   <div class="input-cont">
                     <p id="emailError" class="error"></p>
-                    <label class="modal-lable" for="modal-email">Email</label>
-                    <br />
+                    <label class="modal-lable" for="modal-email">Email</label
+                    ><br />
                     <input
                       type="email"
-                      placeholder="Enter Your Email"
-                      name=""
                       id="modal-email"
+                      name="email"
+                      placeholder="Enter Your Email"
                     />
                   </div>
                 </div>
+
+                <!-- Password -->
                 <div class="col-12 modal-col">
                   <div class="input-cont">
                     <p id="passwordError" class="error"></p>
                     <label class="modal-lable" for="modal-password"
-                      >password</label
-                    >
-                    <br />
+                      >Password</label
+                    ><br />
                     <input
                       type="password"
-                      placeholder="Enter Your Password"
-                      name=""
                       id="modal-password"
+                      name="password"
+                      placeholder="Enter Your Password"
                     />
                   </div>
                 </div>
-                <div class="col-12 modal-col">
-                  <div class="input-cont btn-cont">
-                    <button type="submit" class="modal-btn">
-                      Create account
-                    </button>
-                  </div>
-                </div>
-                <div class="col-5">
+
+                <div class="col-6">
                   <a href="" class="apple-btn">
                     <figure class="apple-img">
-                      <img src="./asstest/Vector (3).png" alt="" />
+                      <img src="./imges2/Vector (3).png" alt="" />
                     </figure>
                     Apple
                   </a>
                 </div>
-                <div class="col-5">
+                <div class="col-6">
                   <a href="" class="google-btn">
                     <figure class="apple-img">
-                      <img src="./asstest/Google - Original.png" alt="" />
+                      <img src="./imges2/Google - Original.png" alt="" />
                     </figure>
                     Google
                   </a>
                 </div>
-                <div class="col-12">
-                  <div class="input-cont-para">
-                    <p>Already have an account ?</p>
-                    <a href="" class="log-btn">Log In</a>
+
+                <!-- Submit -->
+                <div class="col-12 modal-col">
+                  <div class="btn-cont">
+                    <button type="submit" class="log-modal-btn">
+                      Login Now
+                    </button>
                   </div>
                 </div>
               </div>
@@ -378,233 +588,101 @@
           </div>
         </div>
       </section>
-      <!-- Services section stars here -->
-      <section class="services">
+      <!-- choose-sec -->
+      <section class="choose-sec">
         <div class="container">
-          <h2 class="services-title" data-aos="fade-up">Our Services</h2>
-          <p class="services-subtitle" data-aos="fade-up" data-aos-delay="150">
-            We provide a wide range of reliable local services designed to meet
-            your daily needs with convenience, quality, and trust.
-          </p>
-          <div class="swiper services-swiper">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide">
-                <div class="slider-wrap" data-aos="fade-up">
-                  <div class="service-card">
-                    <div class="card-img">
-                      <img src="./asstest/plumber.png" alt="Plumber" />
-                      <div class="card-icon">
-                        <img src="./asstest/plumber logo.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <h3>Plumber</h3>
-                      <p>
-                        Professional plumbing services for repairs,
-                        installations, and maintenance
-                      </p>
-                      <a href="#">View Service</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="swiper-slide">
-                <div class="slider-warp" data-aos="fade-up">
-                  <div class="service-card">
-                    <div class="card-img">
-                      <img src="./asstest/cleaner.png" alt="Cleaner" />
-                      <div class="card-icon">
-                        <img src="./asstest/cleaner logo.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <h3>Cleaner</h3>
-                      <p>
-                        Reliable cleaning services for homes, offices, and
-                        commercial spaces
-                      </p>
-                      <a href="#">View Service</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="swiper-slide">
-                <div class="slider-wrap" data-aos="fade-up">
-                  <div class="service-card">
-                    <div class="card-img">
-                      <img src="./asstest/electrictian.png" alt="Electrician" />
-                      <div class="card-icon">
-                        <img src="./asstest/eletrician logo.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <h3>Electrician</h3>
-                      <p>
-                        Licensed electricians for wiring, repairs, and
-                        electrical installations
-                      </p>
-                      <a href="#">View Service</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 4 -->
-              <div class="swiper-slide">
-                <div class="slider-wrap" data-aos="fade-up">
-                  <div class="service-card">
-                    <div class="card-img">
-                      <img src="./asstest/painter.png" alt="Painter" />
-                      <div class="card-icon">
-                        <img src="./asstest/painter logo.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <h3>Painter</h3>
-                      <p>
-                        Expert painters for interior and exterior painting
-                        projects
-                      </p>
-                      <a href="#">View Service</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 5 -->
-              <div class="swiper-slide">
-                <div class="slider-wrap" data-aos="fade-up">
-                  <div class="service-card">
-                    <div class="card-img">
-                      <img
-                        src="./asstest/Rectangle 9 (1).png"
-                        alt="AC Technician"
-                      />
-                      <div class="card-icon">
-                        <img src="./asstest/Vector (2).png" alt="" />
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <h3>Mechanic</h3>
-                      <p>
-                        Specialized mechanical services for mission-critical
-                        equipment and repairs
-                      </p>
-                      <a href="#">View Service</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 6 -->
-              <div class="swiper-slide">
-                <div class="slider-wrap" data-aos="fade-up">
-                  <div class="service-card">
-                    <div class="card-img">
-                      <img
-                        src="./asstest/Rectangle 9 (2).png"
-                        alt="Carpenter"
-                      />
-                      <div class="card-icon">
-                        <img
-                          src="./asstest/game-icons_gardening-shears.png"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <h3>Gardener</h3>
-                      <p>
-                        Lawn care, landscaping, and garden maintenance services
-                      </p>
-                      <a href="#">View Service</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Swiper Controls -->
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+          <div class="choose-header">
+            <h1 class="title1">
+              Choose Your Perfect
+              <span>Clean</span>
+            </h1>
           </div>
-          <!-- <div class="services-row"> -->
-          <!-- Card 1 -->
-          <!-- <div class="service-card">
-            <div class="card-img">
-              <img src="./asstest/plumber.png" alt="Plumber" />
-              <div class="card-icon">
-                <img src="./asstest/plumber logo.png" alt="" />
+          <div class="row align-items-center">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
+              <div class="card choose-card">
+                <div class="choose-card-body">
+                  <div class="choose-card-header">
+                    <h5 class="title5">Basic Plan</h5>
+                    <h1 class="title1">₹299<span>/month</span></h1>
+                  </div>
+                  <ul class="choose-card-list">
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                      2 service visits per month
+                    </li>
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                      Any one service (Plumber / Electrician)
+                    </li>
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                      Standard booking
+                    </li>
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                      Verified professionals
+                    </li>
+                  </ul>
+                  <div class="choose-card-btn">
+                    <a href="" class="choose-btn"> Choose Standard Plan </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card-content">
-              <h3>Plumber</h3>
-              <p>
-                Professional plumbing services for repairs, installations, and
-                maintenance
-              </p>
-              <a href="#">View Service</a>
-            </div>
-          </div> -->
-          <!-- Card 2 -->
-          <!-- <div class="service-card">
-            <div class="card-img">
-              <img src="./asstest/cleaner.png" alt="Cleaner" />
-              <div class="card-icon">
-                <img src="./asstest/cleaner logo.png" alt="" />
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-12">
+              <div class="card choose-card">
+                <div class="choose-card-body">
+                  <div class="card-top">
+                    Most Popular
+                  </div>
+                  <div class="choose-card-header">
+                    <h5 class="title5">Standard Plan</h5>
+                    <h1 class="title1">₹599<span>/month</span></h1>
+                  </div>
+                  <ul class="choose-card-list">
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                    4 service visits per month
+                    </li>
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                      All services included
+                    </li>
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                      Faster service response
+                    </li>
+                    <li>
+                      <figure class="list-icon">
+                        <img src="./asstest/nrk_media-completed.png" alt="" />
+                      </figure>
+                     Verified professionals
+                    </li>
+                  </ul>
+                  <div class="choose-card-btn">
+                    <a href="" class="choose-btn"> Choose Standard Plan </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="card-content">
-              <h3>Cleaner</h3>
-              <p>
-                Reliable cleaning services for homes, offices, and commercial
-                spaces
-              </p>
-              <a href="#">View Service</a>
-            </div>
-          </div> -->
-          <!-- Card 3 -->
-          <!-- <div class="service-card">
-            <div class="card-img">
-              <img src="./asstest/electrictian.png" alt="Electrician" />
-              <div class="card-icon">
-                <img src="./asstest/eletrician logo.png" alt="" />
-              </div>
-            </div>
-            <div class="card-content">
-              <h3>Electrician</h3>
-              <p>
-                Licensed electricians for wiring, repairs, and electrical
-                installations
-              </p>
-              <a href="#">View Service</a>
-            </div>
-          </div> -->
-          <!-- Card 4 -->
-          <!-- <div class="service-card">
-            <div class="card-img">
-              <img src="./asstest/painter.png" alt="Painter" />
-              <div class="card-icon">
-                <img src="./asstest/painter logo.png" alt="" />
-              </div>
-            </div>
-            <div class="card-content">
-              <h3>Painter</h3>
-              <p>Expert painters for interior and exterior painting projects</p>
-              <a href="#">View Service</a>
             </div>
           </div>
-        </div> -->
         </div>
       </section>
-      <!-- Services section ends here -->
-      <!-- CTA section stars here -->
+         <!-- CTA section stars here -->
       <section class="cta">
         <div class="cta-row">
           <div class="cta-col">
@@ -622,7 +700,9 @@
               We’ll fixed it today!
             </h2>
             <p class="cta-phone">
-              <i class="fa-solid fa-phone"></i>
+             <span class="phone-circle">
+               <i class="fa-solid fa-phone"></i>
+             </span>
               + 123 456 7890 <span>or</span>
             </p>
             <button class="cta-btn">Get a quote</button>
@@ -649,7 +729,6 @@
                       targeting every corner and hidden area.
                     </p>
                     <strong>Price: ₹999 onwards</strong>
-                    <a href="#">Explore Now →</a>
                   </div>
                 </div>
               </div>
@@ -667,7 +746,6 @@
                       rodents and other unwanted pests.
                     </p>
                     <strong>Price: ₹499 onwards</strong>
-                    <a href="#">Explore Now →</a>
                   </div>
                 </div>
               </div>
@@ -721,7 +799,7 @@
               </p>
               <div class="footer-social">
                 <ul>
-                 <li>
+                  <li>
                     <a
                       href="https://www.facebook.com/LocalProServices"
                       class="footer-social-link"
@@ -753,6 +831,7 @@
                       <i class="fa-brands fa-x-twitter"></i>
                     </a>
                   </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -760,10 +839,12 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Site Links</div>
               <ul>
-                  <li><a href="index4.html" class="footer-link">Blog</a></li>
+                <li><a href="index4.html" class="footer-link">Blog</a></li>
                 <li><a href="index5.html" class="footer-link">Contct Us</a></li>
                 <li><a href="" class="footer-link">Jobs</a></li>
-                <li><a href="index3.html" class="footer-link">Categories</a></li>
+                <li>
+                  <a href="index3.html" class="footer-link">Categories</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -771,7 +852,7 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Popular Cities</div>
               <ul>
-               <li>
+                <li>
                   <a
                     data-fancybox
                     data-type="iframe"
@@ -831,7 +912,7 @@
             <div class="footer-cont">
               <div class="footer-cont-header">Contact Info</div>
               <ul>
-               <li>
+                <li>
                   <a
                     data-fancybox
                     data-type="iframe"
@@ -902,17 +983,17 @@
         </div>
       </div>
     </footer>
-     <!-- 🔽 Fancybox hidden content (HERE) -->
-<div style="display:none;" id="dailyOpenTime">
-  <div class="time-popup">
-    <h3>Opening Hours</h3>
-    <ul>
-      <li>Mon – Fri: 09:00 AM – 10:00 PM</li>
-      <li>Saturday: 09:00 AM – 08:00 PM</li>
-      <li>Sunday: Closed</li>
-    </ul>
-  </div>
-</div>
+    <!-- 🔽 Fancybox hidden content (HERE) -->
+    <div style="display: none" id="dailyOpenTime">
+      <div class="time-popup">
+        <h3>Opening Hours</h3>
+        <ul>
+          <li>Mon – Fri: 09:00 AM – 10:00 PM</li>
+          <li>Saturday: 09:00 AM – 08:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+    </div>
     <!-- aos-js -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <!-- fancy-box-js -->
