@@ -235,6 +235,8 @@ var swiper6 = new Swiper(".blog-swiper", {
     });
   });
 
+// singup form
+
 document.getElementById("modalform").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -276,6 +278,7 @@ document.getElementById("modalform").addEventListener("submit", function (e) {
     // this.submit(); // enable when backend is ready
   }
 });
+
 const locationBox = document.querySelector(".nav-location");
 const locationSelect = document.getElementById("locationSelect");
 const locationText = document.querySelector(".location-text");

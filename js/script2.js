@@ -59,21 +59,50 @@ form.addEventListener("submit", function (e) {
 
   let isValid = true;
 
-  // Reset errors
-  emailError.textContent = "";
-  passwordError.textContent = "";
+  // singup form
 
-  // Email validation
-  const emailValue = emailInput.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+document.getElementById("modalform").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  if (emailValue === "") {
-    emailError.textContent = "Email is required";
-    isValid = false;
-  } else if (!emailPattern.test(emailValue)) {
-    emailError.textContent = "Enter a valid email address";
+  const email = document.getElementById("modal-email").value.trim();
+  const password = document.getElementById("modal-password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
+  const address = document.getElementById("address").value.trim();
+
+  // Clear errors
+  document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+  let isValid = true;
+
+  if (!email) {
+    document.getElementById("emailError").textContent = "Email is required";
     isValid = false;
   }
+
+  if (password.length < 6) {
+    document.getElementById("passwordError").textContent =
+      "Password must be at least 6 characters";
+    isValid = false;
+  }
+
+  if (password !== confirmPassword) {
+    document.getElementById("confirmPasswordError").textContent =
+      "Passwords do not match";
+    isValid = false;
+  }
+
+  if (!address) {
+    document.getElementById("addressError").textContent =
+      "Address is required";
+    isValid = false;
+  }
+
+  if (isValid) {
+    alert("Account created successfully ✅");
+    // this.submit(); // enable when backend is ready
+  }
+});
+
 
   // Password validation
   const passwordValue = passwordInput.value.trim();

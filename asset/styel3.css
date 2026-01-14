@@ -47,6 +47,7 @@ body {
   background: #fff;
   position: relative;
   z-index: -1;
+ overflow: hidden !important;
 }
 .slider-container{
   max-width: 1950px;
@@ -780,8 +781,8 @@ border-bottom-right-radius: 20px;
   position: relative;
   overflow: hidden;
 }
-.banner-container{
-  margin-top: 100px;
+ .banner-container{
+  margin-top: 200px !important;
 }
 .banner-sec::after {
   /* content: ""; */
@@ -872,9 +873,6 @@ border-bottom-right-radius: 20px;
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-.banner-container {
-  margin-top: 200px !important;
 }
 .banner-badge {
   position: absolute;
@@ -2002,7 +2000,12 @@ border-bottom-right-radius: 20px;
   .about-content {
     padding-left: 0;
   }
-
+ .about-content>h2{
+  text-align: center;
+ }
+ .about-content>p{
+  text-align: center;
+ }
   .about-image img {
     margin: auto;
   }
